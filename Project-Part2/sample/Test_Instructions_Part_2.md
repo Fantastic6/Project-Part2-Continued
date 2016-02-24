@@ -2,7 +2,7 @@
 
 ## LDR
 
-Instruction: LDR, 1,0,2[,0]
+Instruction: LDR 1,0,2[,0]
 
 Load register 1 with the contents of memory location 1. 
 
@@ -15,7 +15,7 @@ Steps:
 
 ## STR
 
-Instruction: STR 2,1,0,21
+Instruction: STR 2,1,21[,0]
 
 Store the contents of register 2 into memory location 21.
 
@@ -41,7 +41,7 @@ Steps:
 
 ## LDX
 
-Instruction LDX 0,1,0,[,1]
+Instruction LDX 0,1,0[,1]
 
 Load index register from memory location 0.
 
@@ -51,7 +51,7 @@ Load index register from memory location 0.
 
 ## STX
 
-Instruction: STX 0,2,0,[,0]
+Instruction: STX 0,2,0[,0]
 
 Store index register 0 to memory location 0
 
@@ -61,7 +61,7 @@ Store index register 0 to memory location 0
 
 ## AMR
 
-Instruction: AMR 3,0,0,[,0]
+Instruction: AMR 3,0,0[,0]
 
 Add the contents of address 0 with the contents of register 3
 
@@ -72,7 +72,7 @@ Add the contents of address 0 with the contents of register 3
 
 ## SMR
 
-Instruction: SMR 3,0,0,[,0]
+Instruction: SMR 3,0,0[,0]
 
 Subtract the contents of memory location 0 from the contents of register 3. 
 
