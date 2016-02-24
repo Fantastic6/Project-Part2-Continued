@@ -2,7 +2,7 @@ package sample;
 
 import java.util.Vector;
 
-public class Cache {
+public class cache {
     private Vector<block> cacheBlock;
 
     Memory memory = new Memory();
@@ -13,7 +13,7 @@ public class Cache {
         private short[] value = new short[4];
     }
     
-    public Cache() {
+    public cache() {
         cacheBlock = new Vector(16);
     }
     
@@ -108,7 +108,7 @@ public class Cache {
    // public static void main(String[] args) {
    //     Memory mem = new Memory();
    //     mem.initialize();
-   //     Cache test = new Cache();
+   //     cache test = new cache();
    //     for(int i = 0; i < 2048; i++) {   
    //         mem.set(i, (short)i);
    //     }

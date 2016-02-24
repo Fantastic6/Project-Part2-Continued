@@ -22,7 +22,7 @@ public class CPU
     short ISR = 0;
 
     // 1 12 bit program counter
-    BitSet PC = new BitSet(12);
+    int PC = 0;
 
     // make memory buffer register
 	short MBR = 0;
@@ -34,8 +34,7 @@ public class CPU
 	
 	boolean[] CC = new boolean[4];
 	
-	public void process_instruction(int index, Cache cache)
-	{
+	public short process_instruction(int index, cache cache) {
 		// fetch the value that PC is pointing to (an instruction) and move it into mbr
 		MBR = cache.read(index);
 		// fetch the value that is in MBR to ISR
@@ -49,24 +48,22 @@ public class CPU
 		System.out.println("opcode is " + opcode);
 
 		// create an array for the parameters
-		int [] parameters;
+		int[] parameters;
 
 		// parse the instruction at ISR into Opcode, R, IX, I, Address
 		parameters = parseInstruction(ISR, opcode);
 
 		// check the parameters array and see that everything is there
-		
-		for (int i = 0; i < parameters.length; i++)
-		{
+
+		for (int i = 0; i < parameters.length; i++) {
 			System.out.println(parameters[i]);
 		}
 
-		
+
 		// use opcode to figure out what instruction to run
 		char userInput = ' ';
-		switch(opcode)
-		{
-			case 1: 
+		switch (opcode) {
+			case 1:
 				// call load
 				ldr(parameters[1], parameters[2], parameters[3], parameters[4], cache);
 				break;
@@ -79,7 +76,7 @@ public class CPU
 			case 4:
 				amr(parameters[1], parameters[2], parameters[3], parameters[4], cache);
 				break;
-			case 5: 
+			case 5:
 				smr(parameters[1], parameters[2], parameters[3], parameters[4], cache);
 				break;
 			case 6:
@@ -137,26 +134,23 @@ public class CPU
 				rrc(parameters[1], parameters[2], parameters[4]);
 				break;
 			case 41:
-                ldx(parameters[2], parameters[4], parameters[3], cache);
-                break;
-            case 42:
-                stx(parameters[2], parameters[4], parameters[3], cache);
-                break;
-            case 61:
-            	in(parameters[2], parameters[4]);
-            	break;
-            case 62:
-            	out(parameters[2], parameters[4]);
-            	break;
-            case 63:
-            	chk(parameters[2], parameters[4]);
-            	break;
+				ldx(parameters[2], parameters[4], parameters[3], cache);
+				break;
+			case 42:
+				stx(parameters[2], parameters[4], parameters[3], cache);
+				break;
+			case 61:
+				in(parameters[1]);
+				break;
+			case 62:
+				return out(parameters[1]);
+			//case 63:
+			//	chk(parameters[2], parameters[4]);
+			//	break;
 			default:
 				break;
 		}
-
-
-
+		return 0;
 	}
 
 
@@ -230,7 +224,7 @@ public class CPU
 	}
 
 	// load instruction
-	private void ldr(int R, int IX, int I, int address, Cache cache)
+	private void ldr(int R, int IX, int I, int address, cache cache)
 	{
 		// calculate the effective address
 		int EA = getEA(IX, I, address, cache);
@@ -240,7 +234,7 @@ public class CPU
 		System.out.println(GPR[R]);
 	}
 
-	private void str(int R, int IX, int I, int address, Cache cache)
+	private void str(int R, int IX, int I, int address, cache cache)
 	{
 		int EA = getEA(IX, I, address, cache);
 		//store
@@ -249,7 +243,7 @@ public class CPU
 		System.out.println(cache.read(EA));
 	}
 
-	private void lda(int R, int IX, int I, int address, Cache cache)
+	private void lda(int R, int IX, int I, int address, cache cache)
 	{
 		int EA = getEA(IX, I, address, cache);
 
@@ -262,7 +256,7 @@ public class CPU
      *  @param: int IX, int address, short[] IR, short[] memory, int param
      *  @return: void
      */
-    private void ldx(int IX, int address, int I, Cache cache) {
+    private void ldx(int IX, int address, int I, cache cache) {
         if(I == 0) {
             IR[IX] = (short) address;
         }
@@ -277,7 +271,7 @@ public class CPU
      *  @param: int IX, int address, short[] IR, short[] memory, int param
      *  @return: void
      */
-    private void stx(int IX, int address, int I, Cache cache) {
+    private void stx(int IX, int address, int I, cache cache) {
         if (I == 0) {
             //Main.memory.memorybank[address] = IR[IX];
             cache.write(address, IR[IX]);
@@ -289,7 +283,7 @@ public class CPU
 
     }
 
-	private void amr(int R, int IX, int I, int address, Cache cache)
+	private void amr(int R, int IX, int I, int address, cache cache)
 	{
 		int EA = getEA(IX, I, address, cache);
 
@@ -299,7 +293,7 @@ public class CPU
 
 	}
 
-	private void smr(int R, int IX, int I, int address, Cache cache)
+	private void smr(int R, int IX, int I, int address, cache cache)
 	{
 		int EA = getEA(IX, I, address, cache);
 
@@ -326,12 +320,14 @@ public class CPU
 	}
 
 	// jump instruction
-	private void jz(int R, int IX, int I, int address, Cache cache)
+	private void jz(int R, int IX, int I, int address, cache cache)
 	{
 		int EA = getEA(IX, I, address, cache);
 		if (GPR[R] == 0)
 		{
 			setPC(EA);
+			System.out.println("getea: " + EA);
+			System.out.println("getPC: " + getPC());
 		}
 		else 
 		{
@@ -341,7 +337,7 @@ public class CPU
 
 	}
 
-	private void jne(int R, int IX, int I, int address, Cache cache)
+	private void jne(int R, int IX, int I, int address, cache cache)
 	{
 		int EA = getEA(IX, I, address, cache);
 		if (GPR[R] != 0)
@@ -354,21 +350,23 @@ public class CPU
 		}
 	}
 
-	private void jcc(int R, int IX, int I, int address, Cache cache)
+	private void jcc(int R, int IX, int I, int address, cache cache)
 	{
 		int EA = getEA(IX, I, address, cache);
 		System.out.println(CC[R]);
 		if (CC[R] != false)
 		{
+
 			setPC(EA);
 		}
 		else 
 		{
+			System.out.println("CC " + R + " is: " + CC[R]);
 			setPC(getPC() + 1);
 		}
 	}
 
-	private void jma(int R, int IX, int I, int address, Cache cache)
+	private void jma(int R, int IX, int I, int address, cache cache)
 	{
 		int EA = getEA(IX, I, address, cache);
 		setPC(EA);
@@ -376,14 +374,14 @@ public class CPU
 
 
 	// confused on R0 should contain pointer to arguments...
-	private void jsr(int R, int IX, int I, int address, Cache cache)
+	private void jsr(int R, int IX, int I, int address, cache cache)
 	{
 		int EA = getEA(IX, I, address, cache);
 		GPR[3] = (short) (getPC() + 1);
 		setPC(EA);
 	}
 
-	private void rfs(int im, Cache cache)
+	private void rfs(int im, cache cache)
 	{
 		GPR[0] = (short) im;
 
@@ -392,7 +390,7 @@ public class CPU
 		setPC(GPR3);
 	}
 
-	private void sob(int R, int IX, int I, int address, Cache cache)
+	private void sob(int R, int IX, int I, int address, cache cache)
 	{
 		int EA = getEA(IX, I, address, cache);
 
@@ -408,7 +406,7 @@ public class CPU
 		}
 	}
 
-	private void jge(int R, int IX, int I, int address, Cache cache)
+	private void jge(int R, int IX, int I, int address, cache cache)
 	{
 		int EA = getEA(IX, I, address, cache);
 		//System.out.println("GPR[0]: " + getGPRValue(0));
@@ -454,15 +452,23 @@ public class CPU
 	
 	private void and(int Rx, int Ry)
 	{
-		GPR[Rx] = (short)(GPR[Rx] & GPR[Ry]);
-		
+		if(GPR[Rx] != 0 && GPR[Ry] != 0) {
+			GPR[Rx] = (short) 1;
+		}
+		else {
+			GPR[Rx] = (short) 0;
+		}
 	}
 	
 
 	private void orr(int Rx, int Ry)
 	{
-		GPR[Rx] = (short)(GPR[Rx] | GPR[Ry]);
-		
+		if(GPR[Rx] == 0 && GPR[Ry] == 0) {
+			GPR[Rx] = (short) 0;
+		}
+		else {
+			GPR[Rx] = (short) 1;
+		}
 	}
 	
 	private void not(int Rx)
@@ -507,25 +513,25 @@ public class CPU
 		}
 	}// this function does not work.
 
-	private void in(int R, int devId)
+	private void in(int R)
 	{
 		// call a helper method to get user input
-		char c = getUserInput();
+		//short c = getUserInput();
 		// move the input to register
-		int value = (int) c;
-
-
-		System.out.println("userInput: " + c);
-		GPR[R] = (short) c;
+		//int value = (int) c;
+		GPR[R] = (short) Controller.resultIN;
+		System.out.println("GPR"  + R + "is" + GPR[R]);
 	}
 
-	private void out(int R, int devId)
+	private short out(int R)
 	{
 		// print out whatever is inside R[R]
-		System.out.println( (char) GPR[R]);
+		System.out.println("return: " + GPR[R] + "R: " + R);
+		return GPR[R];
+
 	}
 
-	private void chk(int R, int devId)
+	/*private void chk(int R, int devId)
 	{
 		if (devId == 0)
 		{
@@ -540,12 +546,12 @@ public class CPU
 			GPR[R] = deviceStatus;
 		}
 		
-	}
+	}*/
 
 
 	
 
-	private int getEA(int IX, int I, int address, Cache cache)
+	private int getEA(int IX, int I, int address, cache cache)
 	{
 		// handle no indirect addressing
 		if (I == 0)
@@ -590,26 +596,12 @@ public class CPU
 
 	public int getPC()
 	{
-		return bitSetToInt(PC);
+		return PC;
 	}
 
 	public void setPC(int value)
 	{
-		int index = 0;
-   		String binaryString = Integer.toBinaryString(value);
-   		System.out.println(binaryString);
-   		int j = 0;
-   		for (int i = binaryString.length() - 1; i >= 0; i--)
-   		{
-   			if (binaryString.charAt(i) == '1')
-   			{
-   				PC.set(j);
-   			}
-   			j++;
-   		}
-   		System.out.println("PC final: " + PC.toString());
-   		
-
+		PC = value;
 	}
 
 
@@ -662,47 +654,47 @@ public class CPU
    		CC[index] = value;
    	}
 
-   	private char getUserInput()
+   	private short getUserInput()
 	{
 		return '1';
 	}
 
-    public static void main(String [] args)
+    /*public static void main(String [] args)
 	{
 		//Memory memory = new Memory();
 
-		//Cache Cache = new Cache();
-		//CPU cpu = new CPU();	
+		//cache cache = new cache();
+		//CPU cpu = new CPU();
 		//System.out.println(PC.toString());
 
 		//process_instruction(index, ISR, memory, IR, GPR);
 		System.out.println("CPU");
-		Cache cache = new Cache();
+		cache cache = new cache();
 		CPU cpu = new CPU();
-		//cpu.test_jz(Cache);
-		//cpu.test_jne(Cache);
-		//cpu.test_jcc(Cache);
-		//cpu.test_jma(Cache);
-		//cpu.test_jsr(Cache);
-		//cpu.test_rfs(Cache);
-		//cpu.test_sob(Cache);
-		//cpu.test_jge(Cache);
-		//cpu.test_mlt(Cache);
-		//cpu.test_mlt(Cache);
-		//cpu.test_dvd(Cache);
-		//cpu.test_trr(Cache);
-		//cpu.test_and(Cache);
-		//cpu.test_or(Cache);
-		//cpu.test_not(Cache);
-		//cpu.test_src(Cache);
+		//cpu.test_jz(cache);
+		//cpu.test_jne(cache);
+		//cpu.test_jcc(cache);
+		//cpu.test_jma(cache);
+		//cpu.test_jsr(cache);
+		//cpu.test_rfs(cache);
+		//cpu.test_sob(cache);
+		//cpu.test_jge(cache);
+		//cpu.test_mlt(cache);
+		//cpu.test_mlt(cache);
+		//cpu.test_dvd(cache);
+		//cpu.test_trr(cache);
+		//cpu.test_and(cache);
+		//cpu.test_or(cache);
+		//cpu.test_not(cache);
+		//cpu.test_src(cache);
 		cpu.test_rrc(cache);
-		//cpu.test_in(Cache);
-		//cpu.test_out(Cache);
-		
-	}
+		//cpu.test_in(cache);
+		//cpu.test_out(cache);
+
+	}*/
 
 	
-	public void test_jz(Cache cache)
+	public void test_jz(cache cache)
 	{
 		
 		// index
@@ -714,7 +706,7 @@ public class CPU
 		System.out.println("PC: " + getPC());
 	}
 
-	public void test_jne(Cache cache)
+	public void test_jne(cache cache)
 	{
 		
 		// index
@@ -727,7 +719,7 @@ public class CPU
 		System.out.println("PC: " + getPC());
 	}
 
-	public void test_jcc(Cache cache)
+	public void test_jcc(cache cache)
 	{
 		
 		// index
@@ -736,12 +728,12 @@ public class CPU
 		//short cacheValue = 67;
 		cache.write(10, instruction);
 		setCCValue(1, CCValue);
-		//Cache.write(31, cacheValue);
+		//cache.write(31, cacheValue);
 		process_instruction(10, cache);
 		System.out.println("PC: " + getPC());
 	}
 
-	public void test_jma(Cache cache)
+	public void test_jma(cache cache)
 	{
 		
 		// index
@@ -754,7 +746,7 @@ public class CPU
 		System.out.println("PC: " + getPC());
 	}
 
-	public void test_jsr(Cache cache)
+	public void test_jsr(cache cache)
 	{
 		
 		// index
@@ -768,7 +760,7 @@ public class CPU
 		System.out.println("R[3]: " + getGPRValue(3));
 	}
 
-	public void test_rfs(Cache cache)
+	public void test_rfs(cache cache)
 	{
 		
 		// index
@@ -784,7 +776,7 @@ public class CPU
 		System.out.println("PC: " + getPC());
 	}
 
-	public void test_sob(Cache cache)
+	public void test_sob(cache cache)
 	{
 		
 		// index
@@ -800,7 +792,7 @@ public class CPU
 		System.out.println("PC: " + getPC());
 	}
 
-	public void test_jge(Cache cache)
+	public void test_jge(cache cache)
 	{
 		
 		// index
@@ -814,7 +806,7 @@ public class CPU
 		System.out.println("PC: " + getPC());
 	}
 
-	public void test_mlt(Cache cache)
+	public void test_mlt(cache cache)
 	{
 		
 		// index
@@ -833,7 +825,7 @@ public class CPU
 		//System.out.println("GPR[3]: " + getGPRValue(3));
 	}
 
-	public void test_dvd(Cache cache)
+	public void test_dvd(cache cache)
 	{
 		
 		// index
@@ -852,7 +844,7 @@ public class CPU
 		//System.out.println("GPR[3]: " + getGPRValue(3));
 	}
 
-	public void test_trr(Cache cache)
+	public void test_trr(cache cache)
 	{
 		
 		// index
@@ -869,7 +861,7 @@ public class CPU
 		
 	}
 
-	public void test_and(Cache cache)
+	public void test_and(cache cache)
 	{
 		
 		// index
@@ -886,7 +878,7 @@ public class CPU
 		
 	}
 
-	public void test_or(Cache cache)
+	public void test_or(cache cache)
 	{
 		
 		// index
@@ -903,7 +895,7 @@ public class CPU
 		
 	}
 
-	public void test_not(Cache cache)
+	public void test_not(cache cache)
 	{
 		
 		// index
@@ -918,7 +910,7 @@ public class CPU
 		
 	}
 
-	public void test_src(Cache cache)
+	public void test_src(cache cache)
 	{
 		
 		int instruction = 32707;
@@ -932,7 +924,7 @@ public class CPU
 		
 	}
 
-	public void test_rrc(Cache cache)
+	public void test_rrc(cache cache)
 	{
 		
 		int instruction = 33731;
@@ -947,7 +939,7 @@ public class CPU
 	}
 
 
-	public void test_in(Cache cache)
+	public void test_in(cache cache)
 	{
 		
 		int instruction = 62464;
@@ -958,7 +950,7 @@ public class CPU
 		
 	}
 
-	public void test_out(Cache cache)
+	public void test_out(cache cache)
 	{
 		
 		int instruction = 63488;
