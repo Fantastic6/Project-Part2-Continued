@@ -425,15 +425,14 @@ public class CPU
 	{
 		GPR[Rx + 1] = (short) ( (int)GPR[Rx] * (int)GPR[Ry] ) ;
 		GPR[Rx] = (short) (((int)GPR[Rx] * (int)GPR[Ry]) >> 16);
-		GPR[Rx] = (short) (((int)GPR[Rx] * (int)GPR[Ry]));
 		if(GPR[Rx] != 0) { CC[0] = true;}
 	}
 
 	private void dvd(int Rx, int Ry)
 	{
-		GPR[Rx] = (short) ((int)GPR[Rx] / (int)GPR[Ry]);
 		GPR[Rx + 1] = (short) ((int)GPR[Rx] % (int)GPR[Ry]);
-		System.out.println("GPR[Rx + 1]: " + (int)GPR[Rx] % (int)GPR[Ry]);
+		GPR[Rx] = (short) ((int)GPR[Rx] / (int)GPR[Ry]);
+		System.out.println("GPR[Rx + 1]: " + GPR[Rx + 1]);
 		if(GPR[Ry] == 0) { CC[3] = true;}
 	}
 
@@ -485,11 +484,13 @@ public class CPU
 	private void src(int Rx, int ALLR, int count)
 	{
 		count = count & 0x0f;
+		System.out.println("allr:" + ALLR);
 		if(ALLR == 0) { //arithmetical right shift
 			GPR[Rx] = (short) (GPR[Rx] >> count);
 		}
 		else if(ALLR == 1) {//arithmetical left shift
 			GPR[Rx] = (short) (GPR[Rx] << count);
+
 		}
 		else if(ALLR == 2) {//logical right shift
 			GPR[Rx] = (short) (GPR[Rx] >> count);

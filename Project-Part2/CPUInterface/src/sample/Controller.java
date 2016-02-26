@@ -58,9 +58,9 @@ public class Controller implements Initializable {
     private String memoryAddress;
     private short instNumber;
     private short result;
-    private boolean numberIn = true;
     static int resultIN = 0;
     private boolean isIN = false;
+    private int counter = 0;
     // KeyCode kc;
 
     @Override
@@ -70,7 +70,7 @@ public class Controller implements Initializable {
         CheckBox R2ObjArray[] = {R2_B1, R2_B2, R2_B4, R2_B8, R2_B16, R2_B32, R2_B64, R2_B128, R2_B256, R2_B512, R2_B1024, R2_B2048, R2_B4096, R2_B8192, R2_B16384, R2_B32768};
         CheckBox R3ObjArray[] = {R3_B1, R3_B2, R3_B4, R3_B8, R3_B16, R3_B32, R3_B64, R3_B128, R3_B256, R3_B512, R3_B1024, R3_B2048, R3_B4096, R3_B8192, R3_B16384, R3_B32768};
         //theTestFunction(Button btn, CheckBox);
-        btnDisplay.setDisable(true);
+//        btnDisplay.setDisable(true);
         //btnSSS.setDisable(true);
         /*R0HBox.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
@@ -87,6 +87,8 @@ public class Controller implements Initializable {
         });
         terminalTF.setOnKeyPressed(new EventHandler<KeyEvent>() {
 
+            public int i = 504;
+
             @Override
             public void handle(KeyEvent event) {
                 List<String> input = new ArrayList<String>();
@@ -100,23 +102,42 @@ public class Controller implements Initializable {
                             String currLine = "";
                             while ((currLine = br.readLine()) != null) {
                                 translate = new Translate(currLine);
-                                translate.stringBuilder();
+                                instNumber = translate.stringBuilder();
+                                Main.myCache.write(i, instNumber);
+                                counter++;
+                                i++;
                             }
+                            Main.cpu.setPC(503);
+                            /*for (int i = 0; i < counter; i++) {
+                                if ((Main.myCache.read(Main.cpu.getPC()) >> 10 & 0x3F) == 61) {
+                                    terminalTF.setText("");
+                                    terminalTF.setOnAction(new EventHandler<ActionEvent>() {
+                                        @Override
+                                        public void handle(ActionEvent event) {
+                                            terminalTF.setOnKeyPressed(new EventHandler<KeyEvent>() {
+                                                @Override
+                                                public void handle(KeyEvent event) {
+                                                    if(event.getCode().equals(KeyCode.SPACE)){
+                                                        resultIN = Integer.parseInt(terminalTF.getText());
+                                                        Main.cpu.process_instruction(Main.cpu.getPC(), Main.myCache);
+                                                        Main.cpu.setPC(Main.cpu.getPC() + 1);
+                                                        System.out.println("RESULT: " + result);
+                                                    }
+                                                }
+                                            });
+                                        }
+                                    });
+                                } else {
+                                    System.out.println("Else!!!");
+                                    Main.cpu.process_instruction(Main.cpu.getPC(), Main.myCache);
+                                    Main.cpu.setPC(Main.cpu.getPC() + 1);
+                                }
+                            }*/
                         } catch (FileNotFoundException e) {
                             e.printStackTrace();
                         } catch (IOException e) {
                             e.printStackTrace();
                         }
-                    }else if(isIN){
-                        resultIN = Integer.parseInt(terminalTF.getText());
-                        result = Main.cpu.process_instruction(Main.cpu.getPC(), Main.myCache);
-
-                        LabelValR0.setText(String.valueOf(Main.cpu.getGPRValue(0)));
-                        LabelValR1.setText(String.valueOf(Main.cpu.getGPRValue(1)));
-                        LabelValR2.setText(String.valueOf(Main.cpu.getGPRValue(2)));
-                        LabelValR3.setText(String.valueOf(Main.cpu.getGPRValue(3)));
-
-                        isIN = false;
                     } else {
                         translate = new Translate(terminalTF.getText().trim());
                         instNumber = translate.stringBuilder();
@@ -918,12 +939,26 @@ public class Controller implements Initializable {
             public void handle(ActionEvent event) {
                 if (event.getSource().toString().equals(btnSSS.toString())) {
 //                    Main.cpu.setIRValue(1, (short) 1);
-                    if ((0x3F & (instNumber >> 10)) == 61) {
-                        terminalTF.setText("");
-                        isIN = true;
-                    } else {
 
-                        result = Main.cpu.process_instruction(Main.cpu.getPC(), Main.myCache);
+
+                    if ((Main.myCache.read(Main.cpu.getPC()) >> 10 & 0x3F) == 61) {
+                        terminalTF.setText("");
+//                        terminalTF.setOnAction(new EventHandler<ActionEvent>() {
+//                            @Override
+//                            public void handle(ActionEvent event) {
+                        terminalTF.setOnKeyPressed(new EventHandler<KeyEvent>() {
+                            @Override
+                            public void handle(KeyEvent event) {
+                                if (event.getCode().equals(KeyCode.SPACE)) {
+                                    resultIN = Integer.parseInt(terminalTF.getText());
+                                    Main.cpu.process_instruction(Main.cpu.getPC(), Main.myCache);
+                                    Main.cpu.setPC(Main.cpu.getPC() + 1);
+                                    System.out.println("RESULT: " + result);
+                                }
+                            }
+                        });
+                            /*}
+                        });*/
 
                         LabelValR0.setText(String.valueOf(Main.cpu.getGPRValue(0)));
                         LabelValR1.setText(String.valueOf(Main.cpu.getGPRValue(1)));
@@ -945,9 +980,42 @@ public class Controller implements Initializable {
                         txtCC1Val.setText(String.valueOf(Main.cpu.getCCValue(1)));
                         txtCC2Val.setText(String.valueOf(Main.cpu.getCCValue(2)));
                         txtCC3Val.setText(String.valueOf(Main.cpu.getCCValue(3)));
-                        if ((0x3F & (instNumber >> 10)) == 62) {
-                            terminalTF.setText(String.valueOf(result));
+                    } else {
+                        if ((Main.myCache.read(Main.cpu.getPC()) >> 10 & 0x3F) == 16 || (Main.myCache.read(Main.cpu.getPC()) >> 10 & 0x3F) == 17) {
+                            result = Main.cpu.process_instruction(Main.cpu.getPC(), Main.myCache);
+                        } else {
+                            if ((Main.myCache.read(Main.cpu.getPC()) >> 10 & 0x3F) == 62) {
+                                result = Main.cpu.process_instruction(Main.cpu.getPC(), Main.myCache);
+                                System.out.println("!!! innner OUT !!! " + result);
+                                terminalTF.setText(String.valueOf(result));
+                            } else {
+                                System.out.println("!!! NOT OUT Instruction !!!");
+                            }
+                            result = Main.cpu.process_instruction(Main.cpu.getPC(), Main.myCache);
+                            System.out.println("P_I returns: " + result);
+                            Main.cpu.setPC(Main.cpu.getPC() + 1);
                         }
+                        LabelValR0.setText(String.valueOf(Main.cpu.getGPRValue(0)));
+                        LabelValR1.setText(String.valueOf(Main.cpu.getGPRValue(1)));
+                        LabelValR2.setText(String.valueOf(Main.cpu.getGPRValue(2)));
+                        LabelValR3.setText(String.valueOf(Main.cpu.getGPRValue(3)));
+                        setCheckBox(Main.cpu.getGPRValue(0), R0ObjArray);
+                        setCheckBox(Main.cpu.getGPRValue(1), R1ObjArray);
+                        setCheckBox(Main.cpu.getGPRValue(2), R2ObjArray);
+                        setCheckBox(Main.cpu.getGPRValue(3), R3ObjArray);
+                        totalSumR0 = Main.cpu.getGPRValue(0);
+                        totalSumR1 = Main.cpu.getGPRValue(1);
+                        totalSumR2 = Main.cpu.getGPRValue(2);
+                        totalSumR3 = Main.cpu.getGPRValue(3);
+                        txtI1Val.setText(String.valueOf(Main.cpu.getIRValue(1)));
+                        txtI2Val.setText(String.valueOf(Main.cpu.getIRValue(2)));
+                        txtI3Val.setText(String.valueOf(Main.cpu.getIRValue(3)));
+                        LabelValPC.setText(String.valueOf(Main.cpu.getPC()));
+                        txtCC0Val.setText(String.valueOf(Main.cpu.getCCValue(0)));
+                        txtCC1Val.setText(String.valueOf(Main.cpu.getCCValue(1)));
+                        txtCC2Val.setText(String.valueOf(Main.cpu.getCCValue(2)));
+                        txtCC3Val.setText(String.valueOf(Main.cpu.getCCValue(3)));
+
 
                     }
                 }
@@ -955,179 +1023,179 @@ public class Controller implements Initializable {
 
         };
 
-            EventHandler eventHandlerI1Line = new EventHandler<ActionEvent>() {
-                @Override
-                public void handle(ActionEvent event) {
-                    if (event.getSource().toString().equals(setI1btn.toString())) {
-                        short value = Short.parseShort(txtI1Val.getText().trim());
+        EventHandler eventHandlerI1Line = new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                if (event.getSource().toString().equals(setI1btn.toString())) {
+                    short value = Short.parseShort(txtI1Val.getText().trim());
 //                    System.out.println("IR1 Value: " + value);
-                        Main.cpu.setIRValue(1, value);
-                    }
+                    Main.cpu.setIRValue(1, value);
                 }
-            };
-            EventHandler eventHandlerI2Line = new EventHandler<ActionEvent>() {
-                @Override
-                public void handle(ActionEvent event) {
-                    if (event.getSource().toString().equals(setI2btn.toString())) {
-                        short value = Short.parseShort(txtI2Val.getText().trim());
-                        Main.cpu.setIRValue(2, value);
-                    }
+            }
+        };
+        EventHandler eventHandlerI2Line = new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                if (event.getSource().toString().equals(setI2btn.toString())) {
+                    short value = Short.parseShort(txtI2Val.getText().trim());
+                    Main.cpu.setIRValue(2, value);
                 }
-            };
-            EventHandler eventHandlerI3Line = new EventHandler<ActionEvent>() {
-                @Override
-                public void handle(ActionEvent event) {
-                    if (event.getSource().toString().equals(setI3btn.toString())) {
-                        short value = Short.parseShort(txtI3Val.getText().trim());
-                        Main.cpu.setIRValue(3, value);
-                    }
+            }
+        };
+        EventHandler eventHandlerI3Line = new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                if (event.getSource().toString().equals(setI3btn.toString())) {
+                    short value = Short.parseShort(txtI3Val.getText().trim());
+                    Main.cpu.setIRValue(3, value);
                 }
-            };
-            EventHandler eventHandlerPC = new EventHandler<ActionEvent>() {
-                @Override
-                public void handle(ActionEvent event) {
-                    if (event.getSource().toString().equals(setPCBtn.toString())) {
+            }
+        };
+        EventHandler eventHandlerPC = new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                if (event.getSource().toString().equals(setPCBtn.toString())) {
 //                    btnDisplay.setDisable(false);
-                        Main.cpu.setPC(Integer.parseInt(LabelValPC.getText().trim()));
-                        //btnSSS.setDisable(false);
-                    }
+                    Main.cpu.setPC(Integer.parseInt(LabelValPC.getText().trim()));
+                    //btnSSS.setDisable(false);
                 }
-            };
+            }
+        };
 
-            EventHandler<ActionEvent> eventHandlerCC0 = new EventHandler<ActionEvent>() {
-                @Override
-                public void handle(ActionEvent event) {
-                    if (event.getSource().toString().equals(setCC0btn.toString())) {
-                        Main.cpu.setCCValue(0, Boolean.parseBoolean(txtCC0Val.getText().trim()));
-                    }
+        EventHandler<ActionEvent> eventHandlerCC0 = new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                if (event.getSource().toString().equals(setCC0btn.toString())) {
+                    Main.cpu.setCCValue(0, Boolean.parseBoolean(txtCC0Val.getText().trim()));
                 }
-            };
-            EventHandler<ActionEvent> eventHandlerCC1 = new EventHandler<ActionEvent>() {
-                @Override
-                public void handle(ActionEvent event) {
-                    if (event.getSource().toString().equals(setCC1btn.toString())) {
-                        Main.cpu.setCCValue(1, Boolean.parseBoolean(txtCC1Val.getText().trim()));
-                    }
+            }
+        };
+        EventHandler<ActionEvent> eventHandlerCC1 = new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                if (event.getSource().toString().equals(setCC1btn.toString())) {
+                    Main.cpu.setCCValue(1, Boolean.parseBoolean(txtCC1Val.getText().trim()));
                 }
-            };
-            EventHandler<ActionEvent> eventHandlerCC2 = new EventHandler<ActionEvent>() {
-                @Override
-                public void handle(ActionEvent event) {
-                    if (event.getSource().toString().equals(setCC2btn.toString())) {
-                        Main.cpu.setCCValue(2, Boolean.parseBoolean(txtCC2Val.getText().trim()));
-                    }
+            }
+        };
+        EventHandler<ActionEvent> eventHandlerCC2 = new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                if (event.getSource().toString().equals(setCC2btn.toString())) {
+                    Main.cpu.setCCValue(2, Boolean.parseBoolean(txtCC2Val.getText().trim()));
                 }
-            };
-            EventHandler<ActionEvent> eventHandlerCC3 = new EventHandler<ActionEvent>() {
-                @Override
-                public void handle(ActionEvent event) {
-                    if (event.getSource().toString().equals(setCC3btn.toString())) {
-                        Main.cpu.setCCValue(3, Boolean.parseBoolean(txtCC3Val.getText().trim()));
-                    }
+            }
+        };
+        EventHandler<ActionEvent> eventHandlerCC3 = new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                if (event.getSource().toString().equals(setCC3btn.toString())) {
+                    Main.cpu.setCCValue(3, Boolean.parseBoolean(txtCC3Val.getText().trim()));
                 }
-            };
-            setCC0btn.setOnAction(eventHandlerCC0);
-            setCC1btn.setOnAction(eventHandlerCC1);
-            setCC2btn.setOnAction(eventHandlerCC2);
-            setCC3btn.setOnAction(eventHandlerCC3);
+            }
+        };
+        setCC0btn.setOnAction(eventHandlerCC0);
+        setCC1btn.setOnAction(eventHandlerCC1);
+        setCC2btn.setOnAction(eventHandlerCC2);
+        setCC3btn.setOnAction(eventHandlerCC3);
 
-            setI1btn.setOnAction(eventHandlerI1Line);
-            setI2btn.setOnAction(eventHandlerI2Line);
-            setI3btn.setOnAction(eventHandlerI3Line);
-            btnDisplay.setOnAction(eventHandlerDisplay);
-            btnSSS.setOnAction(eventHandlerSSS);
-            //R1 register Set EventHandler
-            setR0Btn.setOnAction(eventHandlerR0Line);
-            R0_B1.setOnAction(eventHandlerR0Line);
-            R0_B2.setOnAction(eventHandlerR0Line);
-            R0_B4.setOnAction(eventHandlerR0Line);
-            R0_B8.setOnAction(eventHandlerR0Line);
-            R0_B16.setOnAction(eventHandlerR0Line);
-            R0_B32.setOnAction(eventHandlerR0Line);
-            R0_B64.setOnAction(eventHandlerR0Line);
-            R0_B128.setOnAction(eventHandlerR0Line);
-            R0_B256.setOnAction(eventHandlerR0Line);
-            R0_B512.setOnAction(eventHandlerR0Line);
-            R0_B1024.setOnAction(eventHandlerR0Line);
-            R0_B2048.setOnAction(eventHandlerR0Line);
-            R0_B4096.setOnAction(eventHandlerR0Line);
-            R0_B8192.setOnAction(eventHandlerR0Line);
-            R0_B16384.setOnAction(eventHandlerR0Line);
-            R0_B32768.setOnAction(eventHandlerR0Line);
-            //R1 register Set EventHandler
-            setR1Btn.setOnAction(eventHandlerR1Line);
-            R1_B1.setOnAction(eventHandlerR1Line);
-            R1_B2.setOnAction(eventHandlerR1Line);
-            R1_B4.setOnAction(eventHandlerR1Line);
-            R1_B8.setOnAction(eventHandlerR1Line);
-            R1_B16.setOnAction(eventHandlerR1Line);
-            R1_B32.setOnAction(eventHandlerR1Line);
-            R1_B64.setOnAction(eventHandlerR1Line);
-            R1_B128.setOnAction(eventHandlerR1Line);
-            R1_B256.setOnAction(eventHandlerR1Line);
-            R1_B512.setOnAction(eventHandlerR1Line);
-            R1_B1024.setOnAction(eventHandlerR1Line);
-            R1_B2048.setOnAction(eventHandlerR1Line);
-            R1_B4096.setOnAction(eventHandlerR1Line);
-            R1_B8192.setOnAction(eventHandlerR1Line);
-            R1_B16384.setOnAction(eventHandlerR1Line);
-            R1_B32768.setOnAction(eventHandlerR1Line);
-            //R2 register Set EventHandler
-            setR2Btn.setOnAction(eventHandlerR2Line);
-            R2_B1.setOnAction(eventHandlerR2Line);
-            R2_B2.setOnAction(eventHandlerR2Line);
-            R2_B4.setOnAction(eventHandlerR2Line);
-            R2_B8.setOnAction(eventHandlerR2Line);
-            R2_B16.setOnAction(eventHandlerR2Line);
-            R2_B32.setOnAction(eventHandlerR2Line);
-            R2_B64.setOnAction(eventHandlerR2Line);
-            R2_B128.setOnAction(eventHandlerR2Line);
-            R2_B256.setOnAction(eventHandlerR2Line);
-            R2_B512.setOnAction(eventHandlerR2Line);
-            R2_B1024.setOnAction(eventHandlerR2Line);
-            R2_B2048.setOnAction(eventHandlerR2Line);
-            R2_B4096.setOnAction(eventHandlerR2Line);
-            R2_B8192.setOnAction(eventHandlerR2Line);
-            R2_B16384.setOnAction(eventHandlerR2Line);
-            R2_B32768.setOnAction(eventHandlerR2Line);
-            //R3 register Set EventHandler
-            setR3Btn.setOnAction(eventHandlerR3Line);
-            R3_B1.setOnAction(eventHandlerR3Line);
-            R3_B2.setOnAction(eventHandlerR3Line);
-            R3_B4.setOnAction(eventHandlerR3Line);
-            R3_B8.setOnAction(eventHandlerR3Line);
-            R3_B16.setOnAction(eventHandlerR3Line);
-            R3_B32.setOnAction(eventHandlerR3Line);
-            R3_B64.setOnAction(eventHandlerR3Line);
-            R3_B128.setOnAction(eventHandlerR3Line);
-            R3_B256.setOnAction(eventHandlerR3Line);
-            R3_B512.setOnAction(eventHandlerR3Line);
-            R3_B1024.setOnAction(eventHandlerR3Line);
-            R3_B2048.setOnAction(eventHandlerR3Line);
-            R3_B4096.setOnAction(eventHandlerR3Line);
-            R3_B8192.setOnAction(eventHandlerR3Line);
-            R3_B16384.setOnAction(eventHandlerR3Line);
-            R3_B32768.setOnAction(eventHandlerR3Line);
-            //Instruction register Set EventHandler
-            setBtnInst.setOnAction(eventHandlerInstLine);
-            Inst_B1.setOnAction(eventHandlerInstLine);
-            Inst_B2.setOnAction(eventHandlerInstLine);
-            Inst_B4.setOnAction(eventHandlerInstLine);
-            Inst_B8.setOnAction(eventHandlerInstLine);
-            Inst_B16.setOnAction(eventHandlerInstLine);
-            Inst_B32.setOnAction(eventHandlerInstLine);
-            Inst_B64.setOnAction(eventHandlerInstLine);
-            Inst_B128.setOnAction(eventHandlerInstLine);
-            Inst_B256.setOnAction(eventHandlerInstLine);
-            Inst_B512.setOnAction(eventHandlerInstLine);
-            Inst_B1024.setOnAction(eventHandlerInstLine);
-            Inst_B2048.setOnAction(eventHandlerInstLine);
-            Inst_B4096.setOnAction(eventHandlerInstLine);
-            Inst_B8192.setOnAction(eventHandlerInstLine);
-            Inst_B16384.setOnAction(eventHandlerInstLine);
-            Inst_B32768.setOnAction(eventHandlerInstLine);
-            //PC register Set EventHandler
-            setPCBtn.setOnAction(eventHandlerPC);
+        setI1btn.setOnAction(eventHandlerI1Line);
+        setI2btn.setOnAction(eventHandlerI2Line);
+        setI3btn.setOnAction(eventHandlerI3Line);
+        btnDisplay.setOnAction(eventHandlerDisplay);
+        btnSSS.setOnAction(eventHandlerSSS);
+        //R1 register Set EventHandler
+        setR0Btn.setOnAction(eventHandlerR0Line);
+        R0_B1.setOnAction(eventHandlerR0Line);
+        R0_B2.setOnAction(eventHandlerR0Line);
+        R0_B4.setOnAction(eventHandlerR0Line);
+        R0_B8.setOnAction(eventHandlerR0Line);
+        R0_B16.setOnAction(eventHandlerR0Line);
+        R0_B32.setOnAction(eventHandlerR0Line);
+        R0_B64.setOnAction(eventHandlerR0Line);
+        R0_B128.setOnAction(eventHandlerR0Line);
+        R0_B256.setOnAction(eventHandlerR0Line);
+        R0_B512.setOnAction(eventHandlerR0Line);
+        R0_B1024.setOnAction(eventHandlerR0Line);
+        R0_B2048.setOnAction(eventHandlerR0Line);
+        R0_B4096.setOnAction(eventHandlerR0Line);
+        R0_B8192.setOnAction(eventHandlerR0Line);
+        R0_B16384.setOnAction(eventHandlerR0Line);
+        R0_B32768.setOnAction(eventHandlerR0Line);
+        //R1 register Set EventHandler
+        setR1Btn.setOnAction(eventHandlerR1Line);
+        R1_B1.setOnAction(eventHandlerR1Line);
+        R1_B2.setOnAction(eventHandlerR1Line);
+        R1_B4.setOnAction(eventHandlerR1Line);
+        R1_B8.setOnAction(eventHandlerR1Line);
+        R1_B16.setOnAction(eventHandlerR1Line);
+        R1_B32.setOnAction(eventHandlerR1Line);
+        R1_B64.setOnAction(eventHandlerR1Line);
+        R1_B128.setOnAction(eventHandlerR1Line);
+        R1_B256.setOnAction(eventHandlerR1Line);
+        R1_B512.setOnAction(eventHandlerR1Line);
+        R1_B1024.setOnAction(eventHandlerR1Line);
+        R1_B2048.setOnAction(eventHandlerR1Line);
+        R1_B4096.setOnAction(eventHandlerR1Line);
+        R1_B8192.setOnAction(eventHandlerR1Line);
+        R1_B16384.setOnAction(eventHandlerR1Line);
+        R1_B32768.setOnAction(eventHandlerR1Line);
+        //R2 register Set EventHandler
+        setR2Btn.setOnAction(eventHandlerR2Line);
+        R2_B1.setOnAction(eventHandlerR2Line);
+        R2_B2.setOnAction(eventHandlerR2Line);
+        R2_B4.setOnAction(eventHandlerR2Line);
+        R2_B8.setOnAction(eventHandlerR2Line);
+        R2_B16.setOnAction(eventHandlerR2Line);
+        R2_B32.setOnAction(eventHandlerR2Line);
+        R2_B64.setOnAction(eventHandlerR2Line);
+        R2_B128.setOnAction(eventHandlerR2Line);
+        R2_B256.setOnAction(eventHandlerR2Line);
+        R2_B512.setOnAction(eventHandlerR2Line);
+        R2_B1024.setOnAction(eventHandlerR2Line);
+        R2_B2048.setOnAction(eventHandlerR2Line);
+        R2_B4096.setOnAction(eventHandlerR2Line);
+        R2_B8192.setOnAction(eventHandlerR2Line);
+        R2_B16384.setOnAction(eventHandlerR2Line);
+        R2_B32768.setOnAction(eventHandlerR2Line);
+        //R3 register Set EventHandler
+        setR3Btn.setOnAction(eventHandlerR3Line);
+        R3_B1.setOnAction(eventHandlerR3Line);
+        R3_B2.setOnAction(eventHandlerR3Line);
+        R3_B4.setOnAction(eventHandlerR3Line);
+        R3_B8.setOnAction(eventHandlerR3Line);
+        R3_B16.setOnAction(eventHandlerR3Line);
+        R3_B32.setOnAction(eventHandlerR3Line);
+        R3_B64.setOnAction(eventHandlerR3Line);
+        R3_B128.setOnAction(eventHandlerR3Line);
+        R3_B256.setOnAction(eventHandlerR3Line);
+        R3_B512.setOnAction(eventHandlerR3Line);
+        R3_B1024.setOnAction(eventHandlerR3Line);
+        R3_B2048.setOnAction(eventHandlerR3Line);
+        R3_B4096.setOnAction(eventHandlerR3Line);
+        R3_B8192.setOnAction(eventHandlerR3Line);
+        R3_B16384.setOnAction(eventHandlerR3Line);
+        R3_B32768.setOnAction(eventHandlerR3Line);
+        //Instruction register Set EventHandler
+        setBtnInst.setOnAction(eventHandlerInstLine);
+        Inst_B1.setOnAction(eventHandlerInstLine);
+        Inst_B2.setOnAction(eventHandlerInstLine);
+        Inst_B4.setOnAction(eventHandlerInstLine);
+        Inst_B8.setOnAction(eventHandlerInstLine);
+        Inst_B16.setOnAction(eventHandlerInstLine);
+        Inst_B32.setOnAction(eventHandlerInstLine);
+        Inst_B64.setOnAction(eventHandlerInstLine);
+        Inst_B128.setOnAction(eventHandlerInstLine);
+        Inst_B256.setOnAction(eventHandlerInstLine);
+        Inst_B512.setOnAction(eventHandlerInstLine);
+        Inst_B1024.setOnAction(eventHandlerInstLine);
+        Inst_B2048.setOnAction(eventHandlerInstLine);
+        Inst_B4096.setOnAction(eventHandlerInstLine);
+        Inst_B8192.setOnAction(eventHandlerInstLine);
+        Inst_B16384.setOnAction(eventHandlerInstLine);
+        Inst_B32768.setOnAction(eventHandlerInstLine);
+        //PC register Set EventHandler
+        setPCBtn.setOnAction(eventHandlerPC);
     }
 
     private void setCheckBox(int value, CheckBox[] checkBoxes) {

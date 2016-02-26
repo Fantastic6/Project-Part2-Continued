@@ -315,7 +315,7 @@ public class Translate {
 		output[0] = "011111";
 		registers = tokens[1];
 		address = tokens[2];
-		output[2] = tokens[3] + tokens[4];
+		output[2] = tokens[4] + tokens[3];
 		registerCheck();
 		addressCheck();
 	}
