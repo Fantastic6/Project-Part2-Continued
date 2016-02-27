@@ -8,11 +8,14 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
 
+
 //    public static Memory memory = new Memory();
-    public static CPU cpu = new CPU();
-    public static Cache myCache = new Cache();
+    public static CPU cpu;
+    public static cache myCache;
 
     public static void main(String[] args) {
+        cpu = new CPU();
+        myCache = new cache();
         launch(args);
     }
 

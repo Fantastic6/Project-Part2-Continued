@@ -315,7 +315,7 @@ public class Translate {
 		output[0] = "011111";
 		registers = tokens[1];
 		address = tokens[2];
-		output[2] = tokens[3] + tokens[4];
+		output[2] = tokens[4] + tokens[3];
 		registerCheck();
 		addressCheck();
 	}
@@ -347,17 +347,16 @@ public class Translate {
 		method();
 	}
 
-	public void stringBuilder() {
+	public short stringBuilder() {
 		StringBuilder strBuilder = new StringBuilder();
 
 		for (int i = 0; i < output.length; i++) {
 			strBuilder.append(output[i]);
 		}
 		String newString = strBuilder.toString();
-
+		short fool = (short)Integer.parseInt(newString, 2);
 		//System.out.println(newString);
-		System.out.println(newString);
-
+		return fool;
 	}
 
 }
