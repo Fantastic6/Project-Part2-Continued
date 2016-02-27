@@ -187,7 +187,7 @@ JGE 0,0,3[,0]
 3. Set GPR[0] = 11. 
 4. Look at PC. It should be 3. 
 
-## MLT * Not working fully! Check GPR[0], GPR[1]
+## MLT 
 
 Instruction: 010100 00 10 0 00000 (20608)
 
@@ -197,7 +197,7 @@ MLT 0,2
 2. Set GPR[0] = 12. Set GPR[2] = 3. 
 3. GPR[0], GPR[1] should be 36 and 36 respectively. 
 
-## DVD * Not working fully! Check modulo operation
+## DVD 
 
 Instruction: 010101 00 10 0 00000 (21632)
 
@@ -255,8 +255,9 @@ SRC 3,3,1,1
 
 Shift register by 3.
 
-Set R[3] = 7.
-Look at R[3].
+1. Put the instruction in the console. Hit Enter.
+2. Set R[3] = 7.
+3. Look at R[3].
 
 ## RRC
 
@@ -266,8 +267,9 @@ RRC 3,3,1,1
 
 Rotate register by 3.
 
-Set R[3] = 5.
-Look at R[3].
+1. Put the instruction in the console. Hit Enter.
+2. Set R[3] = 5.
+3. Look at R[3].
 
 # IN
 
