@@ -39,60 +39,67 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="87" column="24" selection-start-line="87" selection-start-column="24" selection-end-line="87" selection-end-column="24" />
+            <state vertical-scroll-proportion="-3.3423424">
+              <caret line="41" column="51" selection-start-line="41" selection-start-column="51" selection-end-line="41" selection-end-column="51" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Controller.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Controller.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.25611746">
-              <caret line="1032" column="8" selection-start-line="1032" selection-start-column="8" selection-end-line="1032" selection-end-column="8" />
+            <state vertical-scroll-proportion="-10.969697">
+              <caret line="1144" column="98" selection-start-line="1144" selection-start-column="98" selection-end-line="1144" selection-end-column="98" />
               <folding>
-                <element signature="class#3164:3297" expanded="false" />
-                <element signature="class#3347:10958" expanded="false" />
-                <element signature="method#handle#0;class#3347:10958" expanded="false" />
-                <element signature="e#3850#3867#0" expanded="false" />
-                <element signature="class#11006:18541" expanded="false" />
-                <element signature="method#handle#0;class#11006:18541" expanded="false" />
-                <element signature="class#18589:26064" expanded="false" />
-                <element signature="method#handle#0;class#18589:26064" expanded="false" />
-                <element signature="class#26112:33587" expanded="false" />
-                <element signature="method#handle#0;class#26112:33587" expanded="false" />
-                <element signature="class#33637:43656" expanded="false" />
-                <element signature="method#handle#0;class#33637:43656" expanded="false" />
-                <element signature="class#43704:44124" expanded="false" />
-                <element signature="method#handle#0;class#43704:44124" expanded="false" />
-                <element signature="class#44172:44527" expanded="false" />
-                <element signature="method#handle#0;class#44172:44527" expanded="false" />
-                <element signature="class#44575:44930" expanded="false" />
-                <element signature="method#handle#0;class#44575:44930" expanded="false" />
-                <element signature="class#44975:45383" expanded="false" />
-                <element signature="method#handle#0;class#44975:45383" expanded="false" />
-                <element signature="class#45432:45887" expanded="false" />
-                <element signature="method#handle#0;class#45432:45887" expanded="false" />
-                <element signature="class#51337:51657" expanded="false" />
-                <element signature="method#handle#0;class#51337:51657" expanded="false" />
-                <element signature="class#51715:52035" expanded="false" />
-                <element signature="class#52093:52413" expanded="false" />
-                <element signature="method#handle#0;class#52093:52413" expanded="false" />
-                <element signature="class#52471:52791" expanded="false" />
-                <element signature="method#handle#0;class#52471:52791" expanded="false" />
-                <element signature="class#59481:61627" expanded="false" />
+                <element signature="class#3099:3232" expanded="false" />
+                <element signature="class#8352:15963" expanded="false" />
+                <element signature="method#handle#0;class#8352:15963" expanded="false" />
+                <element signature="e#8855#8872#0" expanded="false" />
+                <element signature="class#16011:23546" expanded="false" />
+                <element signature="method#handle#0;class#16011:23546" expanded="false" />
+                <element signature="class#23594:31069" expanded="false" />
+                <element signature="method#handle#0;class#23594:31069" expanded="false" />
+                <element signature="class#31117:38592" expanded="false" />
+                <element signature="method#handle#0;class#31117:38592" expanded="false" />
+                <element signature="class#38642:48661" expanded="false" />
+                <element signature="method#handle#0;class#38642:48661" expanded="false" />
+                <element signature="class#48709:49129" expanded="false" />
+                <element signature="method#handle#0;class#48709:49129" expanded="false" />
+                <element signature="class#49177:49532" expanded="false" />
+                <element signature="method#handle#0;class#49177:49532" expanded="false" />
+                <element signature="class#49580:49935" expanded="false" />
+                <element signature="method#handle#0;class#49580:49935" expanded="false" />
+                <element signature="class#49980:50388" expanded="false" />
+                <element signature="method#handle#0;class#49980:50388" expanded="false" />
+                <element signature="class#50437:50892" expanded="false" />
+                <element signature="method#handle#0;class#50437:50892" expanded="false" />
+                <element signature="class#50937:56469" expanded="false" />
+                <element signature="class#51363:52203" expanded="false" />
+                <element signature="method#handle#0;class#51363:52203" expanded="false" />
+                <element signature="class#56528:56848" expanded="false" />
+                <element signature="method#handle#0;class#56528:56848" expanded="false" />
+                <element signature="class#56906:57226" expanded="false" />
+                <element signature="method#handle#0;class#56906:57226" expanded="false" />
+                <element signature="class#57284:57604" expanded="false" />
+                <element signature="method#handle#0;class#57284:57604" expanded="false" />
+                <element signature="class#57662:57982" expanded="false" />
+                <element signature="method#handle#0;class#57662:57982" expanded="false" />
+                <element signature="class#61714:66169" expanded="false" />
+                <element signature="method#handle#0;class#61714:66169" expanded="false" />
+                <element signature="class#62241:64387" expanded="false" />
+                <element signature="method#handle#0;class#62241:64387" expanded="false" />
                 <element signature="method#setCheckBox#0;class#Controller#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="testing.txt" pinned="false" current-in-tab="false">
+      <file leaf-file-name="testing.txt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/testing.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="32" column="10" selection-start-line="32" selection-start-column="10" selection-end-line="32" selection-end-column="10" />
+            <state vertical-scroll-proportion="1.0016694">
+              <caret line="25" column="8" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -122,7 +129,7 @@
         <entry file="file://$PROJECT_DIR$/src/sample/CPU.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="145" column="18" selection-start-line="145" selection-start-column="18" selection-end-line="145" selection-end-column="18" />
+              <caret line="642" column="13" selection-start-line="642" selection-start-column="13" selection-end-line="642" selection-end-column="13" />
               <folding>
                 <element signature="method#ldr#0;class#CPU#0" expanded="false" />
                 <element signature="method#str#0;class#CPU#0" expanded="false" />
@@ -146,6 +153,8 @@
                 <element signature="docComment;method#setIRValue#0;class#CPU#0" expanded="false" />
                 <element signature="docComment;method#getISRValue#0;class#CPU#0" expanded="false" />
                 <element signature="docComment;method#setISRValue#0;class#CPU#0" expanded="false" />
+                <element signature="e#13347#13348#0" expanded="true" />
+                <element signature="e#13374#13375#0" expanded="true" />
                 <element signature="method#test_jne#0;class#CPU#0" expanded="false" />
                 <element signature="method#test_jcc#0;class#CPU#0" expanded="false" />
                 <element signature="method#test_jma#0;class#CPU#0" expanded="false" />
@@ -181,13 +190,13 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/sample/cache.java" />
-        <option value="$PROJECT_DIR$/src/sample/sample.fxml" />
         <option value="$PROJECT_DIR$/src/sample/Main.java" />
         <option value="$PROJECT_DIR$/src/sample/CPU.java" />
         <option value="$PROJECT_DIR$/src/sample/Translate.java" />
         <option value="$PROJECT_DIR$/test2.txt" />
-        <option value="$PROJECT_DIR$/testing.txt" />
+        <option value="$PROJECT_DIR$/src/sample/sample.fxml" />
         <option value="$PROJECT_DIR$/src/sample/Controller.java" />
+        <option value="$PROJECT_DIR$/testing.txt" />
       </list>
     </option>
   </component>
@@ -822,12 +831,12 @@
       <workItem from="1456422687207" duration="10474000" />
       <workItem from="1456495317931" duration="79000" />
       <workItem from="1456515553470" duration="11040000" />
-      <workItem from="1456597013138" duration="1231000" />
+      <workItem from="1456597013138" duration="9637000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49959000" />
+    <option name="totallyTimeSpent" value="58365000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-16" y="-16" width="3669" height="2192" extended-state="6" />
@@ -840,7 +849,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32931307" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3439958" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1475827" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -904,36 +913,43 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="class#3164:3297" expanded="false" />
-            <element signature="class#3347:10958" expanded="false" />
-            <element signature="method#handle#0;class#3347:10958" expanded="false" />
-            <element signature="e#3850#3867#0" expanded="false" />
-            <element signature="class#11006:18541" expanded="false" />
-            <element signature="method#handle#0;class#11006:18541" expanded="false" />
-            <element signature="class#18589:26064" expanded="false" />
-            <element signature="method#handle#0;class#18589:26064" expanded="false" />
-            <element signature="class#26112:33587" expanded="false" />
-            <element signature="method#handle#0;class#26112:33587" expanded="false" />
-            <element signature="class#33637:43656" expanded="false" />
-            <element signature="method#handle#0;class#33637:43656" expanded="false" />
-            <element signature="class#43704:44124" expanded="false" />
-            <element signature="method#handle#0;class#43704:44124" expanded="false" />
-            <element signature="class#44172:44527" expanded="false" />
-            <element signature="method#handle#0;class#44172:44527" expanded="false" />
-            <element signature="class#44575:44930" expanded="false" />
-            <element signature="method#handle#0;class#44575:44930" expanded="false" />
-            <element signature="class#44975:45383" expanded="false" />
-            <element signature="method#handle#0;class#44975:45383" expanded="false" />
-            <element signature="class#45432:45887" expanded="false" />
-            <element signature="method#handle#0;class#45432:45887" expanded="false" />
-            <element signature="class#51337:51657" expanded="false" />
-            <element signature="method#handle#0;class#51337:51657" expanded="false" />
-            <element signature="class#51715:52035" expanded="false" />
-            <element signature="class#52093:52413" expanded="false" />
-            <element signature="method#handle#0;class#52093:52413" expanded="false" />
-            <element signature="class#52471:52791" expanded="false" />
-            <element signature="method#handle#0;class#52471:52791" expanded="false" />
-            <element signature="class#59481:61627" expanded="false" />
+            <element signature="class#3099:3232" expanded="false" />
+            <element signature="class#8352:15963" expanded="false" />
+            <element signature="method#handle#0;class#8352:15963" expanded="false" />
+            <element signature="e#8855#8872#0" expanded="false" />
+            <element signature="class#16011:23546" expanded="false" />
+            <element signature="method#handle#0;class#16011:23546" expanded="false" />
+            <element signature="class#23594:31069" expanded="false" />
+            <element signature="method#handle#0;class#23594:31069" expanded="false" />
+            <element signature="class#31117:38592" expanded="false" />
+            <element signature="method#handle#0;class#31117:38592" expanded="false" />
+            <element signature="class#38642:48661" expanded="false" />
+            <element signature="method#handle#0;class#38642:48661" expanded="false" />
+            <element signature="class#48709:49129" expanded="false" />
+            <element signature="method#handle#0;class#48709:49129" expanded="false" />
+            <element signature="class#49177:49532" expanded="false" />
+            <element signature="method#handle#0;class#49177:49532" expanded="false" />
+            <element signature="class#49580:49935" expanded="false" />
+            <element signature="method#handle#0;class#49580:49935" expanded="false" />
+            <element signature="class#49980:50388" expanded="false" />
+            <element signature="method#handle#0;class#49980:50388" expanded="false" />
+            <element signature="class#50437:50892" expanded="false" />
+            <element signature="method#handle#0;class#50437:50892" expanded="false" />
+            <element signature="class#50937:56469" expanded="false" />
+            <element signature="class#51363:52203" expanded="false" />
+            <element signature="method#handle#0;class#51363:52203" expanded="false" />
+            <element signature="class#56528:56848" expanded="false" />
+            <element signature="method#handle#0;class#56528:56848" expanded="false" />
+            <element signature="class#56906:57226" expanded="false" />
+            <element signature="method#handle#0;class#56906:57226" expanded="false" />
+            <element signature="class#57284:57604" expanded="false" />
+            <element signature="method#handle#0;class#57284:57604" expanded="false" />
+            <element signature="class#57662:57982" expanded="false" />
+            <element signature="method#handle#0;class#57662:57982" expanded="false" />
+            <element signature="class#61714:66169" expanded="false" />
+            <element signature="method#handle#0;class#61714:66169" expanded="false" />
+            <element signature="class#62241:64387" expanded="false" />
+            <element signature="method#handle#0;class#62241:64387" expanded="false" />
             <element signature="method#setCheckBox#0;class#Controller#0" expanded="false" />
           </folding>
         </state>
@@ -990,6 +1006,8 @@
             <element signature="docComment;method#setIRValue#0;class#CPU#0" expanded="false" />
             <element signature="docComment;method#getISRValue#0;class#CPU#0" expanded="false" />
             <element signature="docComment;method#setISRValue#0;class#CPU#0" expanded="false" />
+            <element signature="e#13347#13348#0" expanded="true" />
+            <element signature="e#13374#13375#0" expanded="true" />
             <element signature="method#test_jne#0;class#CPU#0" expanded="false" />
             <element signature="method#test_jcc#0;class#CPU#0" expanded="false" />
             <element signature="method#test_jma#0;class#CPU#0" expanded="false" />
@@ -1037,36 +1055,43 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="122" column="70" selection-start-line="122" selection-start-column="61" selection-end-line="122" selection-end-column="70" />
           <folding>
-            <element signature="class#3164:3297" expanded="false" />
-            <element signature="class#3347:10958" expanded="false" />
-            <element signature="method#handle#0;class#3347:10958" expanded="false" />
-            <element signature="e#3850#3867#0" expanded="false" />
-            <element signature="class#11006:18541" expanded="false" />
-            <element signature="method#handle#0;class#11006:18541" expanded="false" />
-            <element signature="class#18589:26064" expanded="false" />
-            <element signature="method#handle#0;class#18589:26064" expanded="false" />
-            <element signature="class#26112:33587" expanded="false" />
-            <element signature="method#handle#0;class#26112:33587" expanded="false" />
-            <element signature="class#33637:43656" expanded="false" />
-            <element signature="method#handle#0;class#33637:43656" expanded="false" />
-            <element signature="class#43704:44124" expanded="false" />
-            <element signature="method#handle#0;class#43704:44124" expanded="false" />
-            <element signature="class#44172:44527" expanded="false" />
-            <element signature="method#handle#0;class#44172:44527" expanded="false" />
-            <element signature="class#44575:44930" expanded="false" />
-            <element signature="method#handle#0;class#44575:44930" expanded="false" />
-            <element signature="class#44975:45383" expanded="false" />
-            <element signature="method#handle#0;class#44975:45383" expanded="false" />
-            <element signature="class#45432:45887" expanded="false" />
-            <element signature="method#handle#0;class#45432:45887" expanded="false" />
-            <element signature="class#51337:51657" expanded="false" />
-            <element signature="method#handle#0;class#51337:51657" expanded="false" />
-            <element signature="class#51715:52035" expanded="false" />
-            <element signature="class#52093:52413" expanded="false" />
-            <element signature="method#handle#0;class#52093:52413" expanded="false" />
-            <element signature="class#52471:52791" expanded="false" />
-            <element signature="method#handle#0;class#52471:52791" expanded="false" />
-            <element signature="class#59481:61627" expanded="false" />
+            <element signature="class#3099:3232" expanded="false" />
+            <element signature="class#8352:15963" expanded="false" />
+            <element signature="method#handle#0;class#8352:15963" expanded="false" />
+            <element signature="e#8855#8872#0" expanded="false" />
+            <element signature="class#16011:23546" expanded="false" />
+            <element signature="method#handle#0;class#16011:23546" expanded="false" />
+            <element signature="class#23594:31069" expanded="false" />
+            <element signature="method#handle#0;class#23594:31069" expanded="false" />
+            <element signature="class#31117:38592" expanded="false" />
+            <element signature="method#handle#0;class#31117:38592" expanded="false" />
+            <element signature="class#38642:48661" expanded="false" />
+            <element signature="method#handle#0;class#38642:48661" expanded="false" />
+            <element signature="class#48709:49129" expanded="false" />
+            <element signature="method#handle#0;class#48709:49129" expanded="false" />
+            <element signature="class#49177:49532" expanded="false" />
+            <element signature="method#handle#0;class#49177:49532" expanded="false" />
+            <element signature="class#49580:49935" expanded="false" />
+            <element signature="method#handle#0;class#49580:49935" expanded="false" />
+            <element signature="class#49980:50388" expanded="false" />
+            <element signature="method#handle#0;class#49980:50388" expanded="false" />
+            <element signature="class#50437:50892" expanded="false" />
+            <element signature="method#handle#0;class#50437:50892" expanded="false" />
+            <element signature="class#50937:56469" expanded="false" />
+            <element signature="class#51363:52203" expanded="false" />
+            <element signature="method#handle#0;class#51363:52203" expanded="false" />
+            <element signature="class#56528:56848" expanded="false" />
+            <element signature="method#handle#0;class#56528:56848" expanded="false" />
+            <element signature="class#56906:57226" expanded="false" />
+            <element signature="method#handle#0;class#56906:57226" expanded="false" />
+            <element signature="class#57284:57604" expanded="false" />
+            <element signature="method#handle#0;class#57284:57604" expanded="false" />
+            <element signature="class#57662:57982" expanded="false" />
+            <element signature="method#handle#0;class#57662:57982" expanded="false" />
+            <element signature="class#61714:66169" expanded="false" />
+            <element signature="method#handle#0;class#61714:66169" expanded="false" />
+            <element signature="class#62241:64387" expanded="false" />
+            <element signature="method#handle#0;class#62241:64387" expanded="false" />
             <element signature="method#setCheckBox#0;class#Controller#0" expanded="false" />
           </folding>
         </state>
@@ -1115,6 +1140,8 @@
             <element signature="docComment;method#setIRValue#0;class#CPU#0" expanded="false" />
             <element signature="docComment;method#getISRValue#0;class#CPU#0" expanded="false" />
             <element signature="docComment;method#setISRValue#0;class#CPU#0" expanded="false" />
+            <element signature="e#13347#13348#0" expanded="true" />
+            <element signature="e#13374#13375#0" expanded="true" />
             <element signature="method#test_jne#0;class#CPU#0" expanded="false" />
             <element signature="method#test_jcc#0;class#CPU#0" expanded="false" />
             <element signature="method#test_jma#0;class#CPU#0" expanded="false" />
@@ -1162,36 +1189,43 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="122" column="70" selection-start-line="122" selection-start-column="61" selection-end-line="122" selection-end-column="70" />
           <folding>
-            <element signature="class#3164:3297" expanded="false" />
-            <element signature="class#3347:10958" expanded="false" />
-            <element signature="method#handle#0;class#3347:10958" expanded="false" />
-            <element signature="e#3850#3867#0" expanded="false" />
-            <element signature="class#11006:18541" expanded="false" />
-            <element signature="method#handle#0;class#11006:18541" expanded="false" />
-            <element signature="class#18589:26064" expanded="false" />
-            <element signature="method#handle#0;class#18589:26064" expanded="false" />
-            <element signature="class#26112:33587" expanded="false" />
-            <element signature="method#handle#0;class#26112:33587" expanded="false" />
-            <element signature="class#33637:43656" expanded="false" />
-            <element signature="method#handle#0;class#33637:43656" expanded="false" />
-            <element signature="class#43704:44124" expanded="false" />
-            <element signature="method#handle#0;class#43704:44124" expanded="false" />
-            <element signature="class#44172:44527" expanded="false" />
-            <element signature="method#handle#0;class#44172:44527" expanded="false" />
-            <element signature="class#44575:44930" expanded="false" />
-            <element signature="method#handle#0;class#44575:44930" expanded="false" />
-            <element signature="class#44975:45383" expanded="false" />
-            <element signature="method#handle#0;class#44975:45383" expanded="false" />
-            <element signature="class#45432:45887" expanded="false" />
-            <element signature="method#handle#0;class#45432:45887" expanded="false" />
-            <element signature="class#51337:51657" expanded="false" />
-            <element signature="method#handle#0;class#51337:51657" expanded="false" />
-            <element signature="class#51715:52035" expanded="false" />
-            <element signature="class#52093:52413" expanded="false" />
-            <element signature="method#handle#0;class#52093:52413" expanded="false" />
-            <element signature="class#52471:52791" expanded="false" />
-            <element signature="method#handle#0;class#52471:52791" expanded="false" />
-            <element signature="class#59481:61627" expanded="false" />
+            <element signature="class#3099:3232" expanded="false" />
+            <element signature="class#8352:15963" expanded="false" />
+            <element signature="method#handle#0;class#8352:15963" expanded="false" />
+            <element signature="e#8855#8872#0" expanded="false" />
+            <element signature="class#16011:23546" expanded="false" />
+            <element signature="method#handle#0;class#16011:23546" expanded="false" />
+            <element signature="class#23594:31069" expanded="false" />
+            <element signature="method#handle#0;class#23594:31069" expanded="false" />
+            <element signature="class#31117:38592" expanded="false" />
+            <element signature="method#handle#0;class#31117:38592" expanded="false" />
+            <element signature="class#38642:48661" expanded="false" />
+            <element signature="method#handle#0;class#38642:48661" expanded="false" />
+            <element signature="class#48709:49129" expanded="false" />
+            <element signature="method#handle#0;class#48709:49129" expanded="false" />
+            <element signature="class#49177:49532" expanded="false" />
+            <element signature="method#handle#0;class#49177:49532" expanded="false" />
+            <element signature="class#49580:49935" expanded="false" />
+            <element signature="method#handle#0;class#49580:49935" expanded="false" />
+            <element signature="class#49980:50388" expanded="false" />
+            <element signature="method#handle#0;class#49980:50388" expanded="false" />
+            <element signature="class#50437:50892" expanded="false" />
+            <element signature="method#handle#0;class#50437:50892" expanded="false" />
+            <element signature="class#50937:56469" expanded="false" />
+            <element signature="class#51363:52203" expanded="false" />
+            <element signature="method#handle#0;class#51363:52203" expanded="false" />
+            <element signature="class#56528:56848" expanded="false" />
+            <element signature="method#handle#0;class#56528:56848" expanded="false" />
+            <element signature="class#56906:57226" expanded="false" />
+            <element signature="method#handle#0;class#56906:57226" expanded="false" />
+            <element signature="class#57284:57604" expanded="false" />
+            <element signature="method#handle#0;class#57284:57604" expanded="false" />
+            <element signature="class#57662:57982" expanded="false" />
+            <element signature="method#handle#0;class#57662:57982" expanded="false" />
+            <element signature="class#61714:66169" expanded="false" />
+            <element signature="method#handle#0;class#61714:66169" expanded="false" />
+            <element signature="class#62241:64387" expanded="false" />
+            <element signature="method#handle#0;class#62241:64387" expanded="false" />
             <element signature="method#setCheckBox#0;class#Controller#0" expanded="false" />
           </folding>
         </state>
@@ -1240,6 +1274,8 @@
             <element signature="docComment;method#setIRValue#0;class#CPU#0" expanded="false" />
             <element signature="docComment;method#getISRValue#0;class#CPU#0" expanded="false" />
             <element signature="docComment;method#setISRValue#0;class#CPU#0" expanded="false" />
+            <element signature="e#13347#13348#0" expanded="true" />
+            <element signature="e#13374#13375#0" expanded="true" />
             <element signature="method#test_jne#0;class#CPU#0" expanded="false" />
             <element signature="method#test_jcc#0;class#CPU#0" expanded="false" />
             <element signature="method#test_jma#0;class#CPU#0" expanded="false" />
@@ -1287,36 +1323,43 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="class#3164:3297" expanded="false" />
-            <element signature="class#3347:10958" expanded="false" />
-            <element signature="method#handle#0;class#3347:10958" expanded="false" />
-            <element signature="e#3850#3867#0" expanded="false" />
-            <element signature="class#11006:18541" expanded="false" />
-            <element signature="method#handle#0;class#11006:18541" expanded="false" />
-            <element signature="class#18589:26064" expanded="false" />
-            <element signature="method#handle#0;class#18589:26064" expanded="false" />
-            <element signature="class#26112:33587" expanded="false" />
-            <element signature="method#handle#0;class#26112:33587" expanded="false" />
-            <element signature="class#33637:43656" expanded="false" />
-            <element signature="method#handle#0;class#33637:43656" expanded="false" />
-            <element signature="class#43704:44124" expanded="false" />
-            <element signature="method#handle#0;class#43704:44124" expanded="false" />
-            <element signature="class#44172:44527" expanded="false" />
-            <element signature="method#handle#0;class#44172:44527" expanded="false" />
-            <element signature="class#44575:44930" expanded="false" />
-            <element signature="method#handle#0;class#44575:44930" expanded="false" />
-            <element signature="class#44975:45383" expanded="false" />
-            <element signature="method#handle#0;class#44975:45383" expanded="false" />
-            <element signature="class#45432:45887" expanded="false" />
-            <element signature="method#handle#0;class#45432:45887" expanded="false" />
-            <element signature="class#51337:51657" expanded="false" />
-            <element signature="method#handle#0;class#51337:51657" expanded="false" />
-            <element signature="class#51715:52035" expanded="false" />
-            <element signature="class#52093:52413" expanded="false" />
-            <element signature="method#handle#0;class#52093:52413" expanded="false" />
-            <element signature="class#52471:52791" expanded="false" />
-            <element signature="method#handle#0;class#52471:52791" expanded="false" />
-            <element signature="class#59481:61627" expanded="false" />
+            <element signature="class#3099:3232" expanded="false" />
+            <element signature="class#8352:15963" expanded="false" />
+            <element signature="method#handle#0;class#8352:15963" expanded="false" />
+            <element signature="e#8855#8872#0" expanded="false" />
+            <element signature="class#16011:23546" expanded="false" />
+            <element signature="method#handle#0;class#16011:23546" expanded="false" />
+            <element signature="class#23594:31069" expanded="false" />
+            <element signature="method#handle#0;class#23594:31069" expanded="false" />
+            <element signature="class#31117:38592" expanded="false" />
+            <element signature="method#handle#0;class#31117:38592" expanded="false" />
+            <element signature="class#38642:48661" expanded="false" />
+            <element signature="method#handle#0;class#38642:48661" expanded="false" />
+            <element signature="class#48709:49129" expanded="false" />
+            <element signature="method#handle#0;class#48709:49129" expanded="false" />
+            <element signature="class#49177:49532" expanded="false" />
+            <element signature="method#handle#0;class#49177:49532" expanded="false" />
+            <element signature="class#49580:49935" expanded="false" />
+            <element signature="method#handle#0;class#49580:49935" expanded="false" />
+            <element signature="class#49980:50388" expanded="false" />
+            <element signature="method#handle#0;class#49980:50388" expanded="false" />
+            <element signature="class#50437:50892" expanded="false" />
+            <element signature="method#handle#0;class#50437:50892" expanded="false" />
+            <element signature="class#50937:56469" expanded="false" />
+            <element signature="class#51363:52203" expanded="false" />
+            <element signature="method#handle#0;class#51363:52203" expanded="false" />
+            <element signature="class#56528:56848" expanded="false" />
+            <element signature="method#handle#0;class#56528:56848" expanded="false" />
+            <element signature="class#56906:57226" expanded="false" />
+            <element signature="method#handle#0;class#56906:57226" expanded="false" />
+            <element signature="class#57284:57604" expanded="false" />
+            <element signature="method#handle#0;class#57284:57604" expanded="false" />
+            <element signature="class#57662:57982" expanded="false" />
+            <element signature="method#handle#0;class#57662:57982" expanded="false" />
+            <element signature="class#61714:66169" expanded="false" />
+            <element signature="method#handle#0;class#61714:66169" expanded="false" />
+            <element signature="class#62241:64387" expanded="false" />
+            <element signature="method#handle#0;class#62241:64387" expanded="false" />
             <element signature="method#setCheckBox#0;class#Controller#0" expanded="false" />
           </folding>
         </state>
@@ -1357,6 +1400,8 @@
             <element signature="docComment;method#setIRValue#0;class#CPU#0" expanded="false" />
             <element signature="docComment;method#getISRValue#0;class#CPU#0" expanded="false" />
             <element signature="docComment;method#setISRValue#0;class#CPU#0" expanded="false" />
+            <element signature="e#13347#13348#0" expanded="true" />
+            <element signature="e#13374#13375#0" expanded="true" />
             <element signature="method#test_jne#0;class#CPU#0" expanded="false" />
             <element signature="method#test_jcc#0;class#CPU#0" expanded="false" />
             <element signature="method#test_jma#0;class#CPU#0" expanded="false" />
@@ -1404,36 +1449,43 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="class#3164:3297" expanded="false" />
-            <element signature="class#3347:10958" expanded="false" />
-            <element signature="method#handle#0;class#3347:10958" expanded="false" />
-            <element signature="e#3850#3867#0" expanded="false" />
-            <element signature="class#11006:18541" expanded="false" />
-            <element signature="method#handle#0;class#11006:18541" expanded="false" />
-            <element signature="class#18589:26064" expanded="false" />
-            <element signature="method#handle#0;class#18589:26064" expanded="false" />
-            <element signature="class#26112:33587" expanded="false" />
-            <element signature="method#handle#0;class#26112:33587" expanded="false" />
-            <element signature="class#33637:43656" expanded="false" />
-            <element signature="method#handle#0;class#33637:43656" expanded="false" />
-            <element signature="class#43704:44124" expanded="false" />
-            <element signature="method#handle#0;class#43704:44124" expanded="false" />
-            <element signature="class#44172:44527" expanded="false" />
-            <element signature="method#handle#0;class#44172:44527" expanded="false" />
-            <element signature="class#44575:44930" expanded="false" />
-            <element signature="method#handle#0;class#44575:44930" expanded="false" />
-            <element signature="class#44975:45383" expanded="false" />
-            <element signature="method#handle#0;class#44975:45383" expanded="false" />
-            <element signature="class#45432:45887" expanded="false" />
-            <element signature="method#handle#0;class#45432:45887" expanded="false" />
-            <element signature="class#51337:51657" expanded="false" />
-            <element signature="method#handle#0;class#51337:51657" expanded="false" />
-            <element signature="class#51715:52035" expanded="false" />
-            <element signature="class#52093:52413" expanded="false" />
-            <element signature="method#handle#0;class#52093:52413" expanded="false" />
-            <element signature="class#52471:52791" expanded="false" />
-            <element signature="method#handle#0;class#52471:52791" expanded="false" />
-            <element signature="class#59481:61627" expanded="false" />
+            <element signature="class#3099:3232" expanded="false" />
+            <element signature="class#8352:15963" expanded="false" />
+            <element signature="method#handle#0;class#8352:15963" expanded="false" />
+            <element signature="e#8855#8872#0" expanded="false" />
+            <element signature="class#16011:23546" expanded="false" />
+            <element signature="method#handle#0;class#16011:23546" expanded="false" />
+            <element signature="class#23594:31069" expanded="false" />
+            <element signature="method#handle#0;class#23594:31069" expanded="false" />
+            <element signature="class#31117:38592" expanded="false" />
+            <element signature="method#handle#0;class#31117:38592" expanded="false" />
+            <element signature="class#38642:48661" expanded="false" />
+            <element signature="method#handle#0;class#38642:48661" expanded="false" />
+            <element signature="class#48709:49129" expanded="false" />
+            <element signature="method#handle#0;class#48709:49129" expanded="false" />
+            <element signature="class#49177:49532" expanded="false" />
+            <element signature="method#handle#0;class#49177:49532" expanded="false" />
+            <element signature="class#49580:49935" expanded="false" />
+            <element signature="method#handle#0;class#49580:49935" expanded="false" />
+            <element signature="class#49980:50388" expanded="false" />
+            <element signature="method#handle#0;class#49980:50388" expanded="false" />
+            <element signature="class#50437:50892" expanded="false" />
+            <element signature="method#handle#0;class#50437:50892" expanded="false" />
+            <element signature="class#50937:56469" expanded="false" />
+            <element signature="class#51363:52203" expanded="false" />
+            <element signature="method#handle#0;class#51363:52203" expanded="false" />
+            <element signature="class#56528:56848" expanded="false" />
+            <element signature="method#handle#0;class#56528:56848" expanded="false" />
+            <element signature="class#56906:57226" expanded="false" />
+            <element signature="method#handle#0;class#56906:57226" expanded="false" />
+            <element signature="class#57284:57604" expanded="false" />
+            <element signature="method#handle#0;class#57284:57604" expanded="false" />
+            <element signature="class#57662:57982" expanded="false" />
+            <element signature="method#handle#0;class#57662:57982" expanded="false" />
+            <element signature="class#61714:66169" expanded="false" />
+            <element signature="method#handle#0;class#61714:66169" expanded="false" />
+            <element signature="class#62241:64387" expanded="false" />
+            <element signature="method#handle#0;class#62241:64387" expanded="false" />
             <element signature="method#setCheckBox#0;class#Controller#0" expanded="false" />
           </folding>
         </state>
@@ -1495,6 +1547,8 @@
             <element signature="docComment;method#setIRValue#0;class#CPU#0" expanded="false" />
             <element signature="docComment;method#getISRValue#0;class#CPU#0" expanded="false" />
             <element signature="docComment;method#setISRValue#0;class#CPU#0" expanded="false" />
+            <element signature="e#13347#13348#0" expanded="true" />
+            <element signature="e#13374#13375#0" expanded="true" />
             <element signature="method#test_jne#0;class#CPU#0" expanded="false" />
             <element signature="method#test_jcc#0;class#CPU#0" expanded="false" />
             <element signature="method#test_jma#0;class#CPU#0" expanded="false" />
@@ -1531,36 +1585,43 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="class#3164:3297" expanded="false" />
-            <element signature="class#3347:10958" expanded="false" />
-            <element signature="method#handle#0;class#3347:10958" expanded="false" />
-            <element signature="e#3850#3867#0" expanded="false" />
-            <element signature="class#11006:18541" expanded="false" />
-            <element signature="method#handle#0;class#11006:18541" expanded="false" />
-            <element signature="class#18589:26064" expanded="false" />
-            <element signature="method#handle#0;class#18589:26064" expanded="false" />
-            <element signature="class#26112:33587" expanded="false" />
-            <element signature="method#handle#0;class#26112:33587" expanded="false" />
-            <element signature="class#33637:43656" expanded="false" />
-            <element signature="method#handle#0;class#33637:43656" expanded="false" />
-            <element signature="class#43704:44124" expanded="false" />
-            <element signature="method#handle#0;class#43704:44124" expanded="false" />
-            <element signature="class#44172:44527" expanded="false" />
-            <element signature="method#handle#0;class#44172:44527" expanded="false" />
-            <element signature="class#44575:44930" expanded="false" />
-            <element signature="method#handle#0;class#44575:44930" expanded="false" />
-            <element signature="class#44975:45383" expanded="false" />
-            <element signature="method#handle#0;class#44975:45383" expanded="false" />
-            <element signature="class#45432:45887" expanded="false" />
-            <element signature="method#handle#0;class#45432:45887" expanded="false" />
-            <element signature="class#51337:51657" expanded="false" />
-            <element signature="method#handle#0;class#51337:51657" expanded="false" />
-            <element signature="class#51715:52035" expanded="false" />
-            <element signature="class#52093:52413" expanded="false" />
-            <element signature="method#handle#0;class#52093:52413" expanded="false" />
-            <element signature="class#52471:52791" expanded="false" />
-            <element signature="method#handle#0;class#52471:52791" expanded="false" />
-            <element signature="class#59481:61627" expanded="false" />
+            <element signature="class#3099:3232" expanded="false" />
+            <element signature="class#8352:15963" expanded="false" />
+            <element signature="method#handle#0;class#8352:15963" expanded="false" />
+            <element signature="e#8855#8872#0" expanded="false" />
+            <element signature="class#16011:23546" expanded="false" />
+            <element signature="method#handle#0;class#16011:23546" expanded="false" />
+            <element signature="class#23594:31069" expanded="false" />
+            <element signature="method#handle#0;class#23594:31069" expanded="false" />
+            <element signature="class#31117:38592" expanded="false" />
+            <element signature="method#handle#0;class#31117:38592" expanded="false" />
+            <element signature="class#38642:48661" expanded="false" />
+            <element signature="method#handle#0;class#38642:48661" expanded="false" />
+            <element signature="class#48709:49129" expanded="false" />
+            <element signature="method#handle#0;class#48709:49129" expanded="false" />
+            <element signature="class#49177:49532" expanded="false" />
+            <element signature="method#handle#0;class#49177:49532" expanded="false" />
+            <element signature="class#49580:49935" expanded="false" />
+            <element signature="method#handle#0;class#49580:49935" expanded="false" />
+            <element signature="class#49980:50388" expanded="false" />
+            <element signature="method#handle#0;class#49980:50388" expanded="false" />
+            <element signature="class#50437:50892" expanded="false" />
+            <element signature="method#handle#0;class#50437:50892" expanded="false" />
+            <element signature="class#50937:56469" expanded="false" />
+            <element signature="class#51363:52203" expanded="false" />
+            <element signature="method#handle#0;class#51363:52203" expanded="false" />
+            <element signature="class#56528:56848" expanded="false" />
+            <element signature="method#handle#0;class#56528:56848" expanded="false" />
+            <element signature="class#56906:57226" expanded="false" />
+            <element signature="method#handle#0;class#56906:57226" expanded="false" />
+            <element signature="class#57284:57604" expanded="false" />
+            <element signature="method#handle#0;class#57284:57604" expanded="false" />
+            <element signature="class#57662:57982" expanded="false" />
+            <element signature="method#handle#0;class#57662:57982" expanded="false" />
+            <element signature="class#61714:66169" expanded="false" />
+            <element signature="method#handle#0;class#61714:66169" expanded="false" />
+            <element signature="class#62241:64387" expanded="false" />
+            <element signature="method#handle#0;class#62241:64387" expanded="false" />
             <element signature="method#setCheckBox#0;class#Controller#0" expanded="false" />
           </folding>
         </state>
@@ -1607,6 +1668,8 @@
             <element signature="docComment;method#setIRValue#0;class#CPU#0" expanded="false" />
             <element signature="docComment;method#getISRValue#0;class#CPU#0" expanded="false" />
             <element signature="docComment;method#setISRValue#0;class#CPU#0" expanded="false" />
+            <element signature="e#13347#13348#0" expanded="true" />
+            <element signature="e#13374#13375#0" expanded="true" />
             <element signature="method#test_jne#0;class#CPU#0" expanded="false" />
             <element signature="method#test_jcc#0;class#CPU#0" expanded="false" />
             <element signature="method#test_jma#0;class#CPU#0" expanded="false" />
@@ -1660,17 +1723,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/sample.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="87" column="24" selection-start-line="87" selection-start-column="24" selection-end-line="87" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test2.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1679,10 +1731,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/sample.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.3423424">
+          <caret line="41" column="51" selection-start-line="41" selection-start-column="51" selection-end-line="41" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/CPU.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="145" column="18" selection-start-line="145" selection-start-column="18" selection-end-line="145" selection-end-column="18" />
+          <caret line="642" column="13" selection-start-line="642" selection-start-column="13" selection-end-line="642" selection-end-column="13" />
           <folding>
             <element signature="method#ldr#0;class#CPU#0" expanded="false" />
             <element signature="method#str#0;class#CPU#0" expanded="false" />
@@ -1706,6 +1769,8 @@
             <element signature="docComment;method#setIRValue#0;class#CPU#0" expanded="false" />
             <element signature="docComment;method#getISRValue#0;class#CPU#0" expanded="false" />
             <element signature="docComment;method#setISRValue#0;class#CPU#0" expanded="false" />
+            <element signature="e#13347#13348#0" expanded="true" />
+            <element signature="e#13374#13375#0" expanded="true" />
             <element signature="method#test_jne#0;class#CPU#0" expanded="false" />
             <element signature="method#test_jcc#0;class#CPU#0" expanded="false" />
             <element signature="method#test_jma#0;class#CPU#0" expanded="false" />
@@ -1729,51 +1794,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/testing.txt">
+    <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="32" column="10" selection-start-line="32" selection-start-column="10" selection-end-line="32" selection-end-column="10" />
-          <folding />
+        <state vertical-scroll-proportion="-10.969697">
+          <caret line="1144" column="98" selection-start-line="1144" selection-start-column="98" selection-end-line="1144" selection-end-column="98" />
+          <folding>
+            <element signature="class#3099:3232" expanded="false" />
+            <element signature="class#8352:15963" expanded="false" />
+            <element signature="method#handle#0;class#8352:15963" expanded="false" />
+            <element signature="e#8855#8872#0" expanded="false" />
+            <element signature="class#16011:23546" expanded="false" />
+            <element signature="method#handle#0;class#16011:23546" expanded="false" />
+            <element signature="class#23594:31069" expanded="false" />
+            <element signature="method#handle#0;class#23594:31069" expanded="false" />
+            <element signature="class#31117:38592" expanded="false" />
+            <element signature="method#handle#0;class#31117:38592" expanded="false" />
+            <element signature="class#38642:48661" expanded="false" />
+            <element signature="method#handle#0;class#38642:48661" expanded="false" />
+            <element signature="class#48709:49129" expanded="false" />
+            <element signature="method#handle#0;class#48709:49129" expanded="false" />
+            <element signature="class#49177:49532" expanded="false" />
+            <element signature="method#handle#0;class#49177:49532" expanded="false" />
+            <element signature="class#49580:49935" expanded="false" />
+            <element signature="method#handle#0;class#49580:49935" expanded="false" />
+            <element signature="class#49980:50388" expanded="false" />
+            <element signature="method#handle#0;class#49980:50388" expanded="false" />
+            <element signature="class#50437:50892" expanded="false" />
+            <element signature="method#handle#0;class#50437:50892" expanded="false" />
+            <element signature="class#50937:56469" expanded="false" />
+            <element signature="class#51363:52203" expanded="false" />
+            <element signature="method#handle#0;class#51363:52203" expanded="false" />
+            <element signature="class#56528:56848" expanded="false" />
+            <element signature="method#handle#0;class#56528:56848" expanded="false" />
+            <element signature="class#56906:57226" expanded="false" />
+            <element signature="method#handle#0;class#56906:57226" expanded="false" />
+            <element signature="class#57284:57604" expanded="false" />
+            <element signature="method#handle#0;class#57284:57604" expanded="false" />
+            <element signature="class#57662:57982" expanded="false" />
+            <element signature="method#handle#0;class#57662:57982" expanded="false" />
+            <element signature="class#61714:66169" expanded="false" />
+            <element signature="method#handle#0;class#61714:66169" expanded="false" />
+            <element signature="class#62241:64387" expanded="false" />
+            <element signature="method#handle#0;class#62241:64387" expanded="false" />
+            <element signature="method#setCheckBox#0;class#Controller#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
+    <entry file="file://$PROJECT_DIR$/testing.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.25611746">
-          <caret line="1032" column="8" selection-start-line="1032" selection-start-column="8" selection-end-line="1032" selection-end-column="8" />
-          <folding>
-            <element signature="class#3164:3297" expanded="false" />
-            <element signature="class#3347:10958" expanded="false" />
-            <element signature="method#handle#0;class#3347:10958" expanded="false" />
-            <element signature="e#3850#3867#0" expanded="false" />
-            <element signature="class#11006:18541" expanded="false" />
-            <element signature="method#handle#0;class#11006:18541" expanded="false" />
-            <element signature="class#18589:26064" expanded="false" />
-            <element signature="method#handle#0;class#18589:26064" expanded="false" />
-            <element signature="class#26112:33587" expanded="false" />
-            <element signature="method#handle#0;class#26112:33587" expanded="false" />
-            <element signature="class#33637:43656" expanded="false" />
-            <element signature="method#handle#0;class#33637:43656" expanded="false" />
-            <element signature="class#43704:44124" expanded="false" />
-            <element signature="method#handle#0;class#43704:44124" expanded="false" />
-            <element signature="class#44172:44527" expanded="false" />
-            <element signature="method#handle#0;class#44172:44527" expanded="false" />
-            <element signature="class#44575:44930" expanded="false" />
-            <element signature="method#handle#0;class#44575:44930" expanded="false" />
-            <element signature="class#44975:45383" expanded="false" />
-            <element signature="method#handle#0;class#44975:45383" expanded="false" />
-            <element signature="class#45432:45887" expanded="false" />
-            <element signature="method#handle#0;class#45432:45887" expanded="false" />
-            <element signature="class#51337:51657" expanded="false" />
-            <element signature="method#handle#0;class#51337:51657" expanded="false" />
-            <element signature="class#51715:52035" expanded="false" />
-            <element signature="class#52093:52413" expanded="false" />
-            <element signature="method#handle#0;class#52093:52413" expanded="false" />
-            <element signature="class#52471:52791" expanded="false" />
-            <element signature="method#handle#0;class#52471:52791" expanded="false" />
-            <element signature="class#59481:61627" expanded="false" />
-            <element signature="method#setCheckBox#0;class#Controller#0" expanded="false" />
-          </folding>
+        <state vertical-scroll-proportion="1.0016694">
+          <caret line="25" column="8" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
+          <folding />
         </state>
       </provider>
     </entry>
