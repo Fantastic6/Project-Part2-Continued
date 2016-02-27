@@ -40,39 +40,59 @@
           </provider>
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="69" column="29" selection-start-line="69" selection-start-column="29" selection-end-line="69" selection-end-column="29" />
+              <caret line="87" column="24" selection-start-line="87" selection-start-column="24" selection-end-line="87" selection-end-column="24" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Controller.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Controller.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="983" column="71" selection-start-line="983" selection-start-column="71" selection-end-line="983" selection-end-column="71" />
+            <state vertical-scroll-proportion="0.25611746">
+              <caret line="1032" column="8" selection-start-line="1032" selection-start-column="8" selection-end-line="1032" selection-end-column="8" />
               <folding>
-                <element signature="method#handle#0;class#7680:15291" expanded="false" />
-                <element signature="e#8183#8200#0" expanded="false" />
-                <element signature="class#15339:22874" expanded="false" />
-                <element signature="method#handle#0;class#15339:22874" expanded="false" />
-                <element signature="class#22922:30397" expanded="false" />
-                <element signature="method#handle#0;class#22922:30397" expanded="false" />
-                <element signature="class#30445:37920" expanded="false" />
-                <element signature="method#handle#0;class#30445:37920" expanded="false" />
-                <element signature="class#37971:47990" expanded="false" />
-                <element signature="method#handle#0;class#37971:47990" expanded="false" />
-                <element signature="method#handle#0;class#48040:48495" expanded="false" />
+                <element signature="class#3164:3297" expanded="false" />
+                <element signature="class#3347:10958" expanded="false" />
+                <element signature="method#handle#0;class#3347:10958" expanded="false" />
+                <element signature="e#3850#3867#0" expanded="false" />
+                <element signature="class#11006:18541" expanded="false" />
+                <element signature="method#handle#0;class#11006:18541" expanded="false" />
+                <element signature="class#18589:26064" expanded="false" />
+                <element signature="method#handle#0;class#18589:26064" expanded="false" />
+                <element signature="class#26112:33587" expanded="false" />
+                <element signature="method#handle#0;class#26112:33587" expanded="false" />
+                <element signature="class#33637:43656" expanded="false" />
+                <element signature="method#handle#0;class#33637:43656" expanded="false" />
+                <element signature="class#43704:44124" expanded="false" />
+                <element signature="method#handle#0;class#43704:44124" expanded="false" />
+                <element signature="class#44172:44527" expanded="false" />
+                <element signature="method#handle#0;class#44172:44527" expanded="false" />
+                <element signature="class#44575:44930" expanded="false" />
+                <element signature="method#handle#0;class#44575:44930" expanded="false" />
+                <element signature="class#44975:45383" expanded="false" />
+                <element signature="method#handle#0;class#44975:45383" expanded="false" />
+                <element signature="class#45432:45887" expanded="false" />
+                <element signature="method#handle#0;class#45432:45887" expanded="false" />
+                <element signature="class#51337:51657" expanded="false" />
+                <element signature="method#handle#0;class#51337:51657" expanded="false" />
+                <element signature="class#51715:52035" expanded="false" />
+                <element signature="class#52093:52413" expanded="false" />
+                <element signature="method#handle#0;class#52093:52413" expanded="false" />
+                <element signature="class#52471:52791" expanded="false" />
+                <element signature="method#handle#0;class#52471:52791" expanded="false" />
+                <element signature="class#59481:61627" expanded="false" />
+                <element signature="method#setCheckBox#0;class#Controller#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="testing.txt" pinned="false" current-in-tab="true">
+      <file leaf-file-name="testing.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/testing.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.36120403">
-              <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="32" column="10" selection-start-line="32" selection-start-column="10" selection-end-line="32" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -166,8 +186,8 @@
         <option value="$PROJECT_DIR$/src/sample/CPU.java" />
         <option value="$PROJECT_DIR$/src/sample/Translate.java" />
         <option value="$PROJECT_DIR$/test2.txt" />
-        <option value="$PROJECT_DIR$/src/sample/Controller.java" />
         <option value="$PROJECT_DIR$/testing.txt" />
+        <option value="$PROJECT_DIR$/src/sample/Controller.java" />
       </list>
     </option>
   </component>
@@ -177,10 +197,10 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-18" />
-    <option name="y" value="-18" />
-    <option name="width" value="3632" />
-    <option name="height" value="2196" />
+    <option name="x" value="-16" />
+    <option name="y" value="-16" />
+    <option name="width" value="3669" />
+    <option name="height" value="2192" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -207,7 +227,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -260,8 +280,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -801,16 +821,17 @@
       <workItem from="1456408940965" duration="2184000" />
       <workItem from="1456422687207" duration="10474000" />
       <workItem from="1456495317931" duration="79000" />
-      <workItem from="1456515553470" duration="5971000" />
+      <workItem from="1456515553470" duration="11040000" />
+      <workItem from="1456597013138" duration="1231000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43659000" />
+    <option name="totallyTimeSpent" value="49959000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-18" y="-18" width="3632" height="2196" extended-state="6" />
-    <editor active="false" />
+    <frame x="-16" y="-16" width="3669" height="2192" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -819,10 +840,10 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32977587" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32931307" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14761631" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1475827" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -873,6 +894,139 @@
       </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
+          <caret line="87" column="24" selection-start-line="87" selection-start-column="24" selection-end-line="87" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="class#3164:3297" expanded="false" />
+            <element signature="class#3347:10958" expanded="false" />
+            <element signature="method#handle#0;class#3347:10958" expanded="false" />
+            <element signature="e#3850#3867#0" expanded="false" />
+            <element signature="class#11006:18541" expanded="false" />
+            <element signature="method#handle#0;class#11006:18541" expanded="false" />
+            <element signature="class#18589:26064" expanded="false" />
+            <element signature="method#handle#0;class#18589:26064" expanded="false" />
+            <element signature="class#26112:33587" expanded="false" />
+            <element signature="method#handle#0;class#26112:33587" expanded="false" />
+            <element signature="class#33637:43656" expanded="false" />
+            <element signature="method#handle#0;class#33637:43656" expanded="false" />
+            <element signature="class#43704:44124" expanded="false" />
+            <element signature="method#handle#0;class#43704:44124" expanded="false" />
+            <element signature="class#44172:44527" expanded="false" />
+            <element signature="method#handle#0;class#44172:44527" expanded="false" />
+            <element signature="class#44575:44930" expanded="false" />
+            <element signature="method#handle#0;class#44575:44930" expanded="false" />
+            <element signature="class#44975:45383" expanded="false" />
+            <element signature="method#handle#0;class#44975:45383" expanded="false" />
+            <element signature="class#45432:45887" expanded="false" />
+            <element signature="method#handle#0;class#45432:45887" expanded="false" />
+            <element signature="class#51337:51657" expanded="false" />
+            <element signature="method#handle#0;class#51337:51657" expanded="false" />
+            <element signature="class#51715:52035" expanded="false" />
+            <element signature="class#52093:52413" expanded="false" />
+            <element signature="method#handle#0;class#52093:52413" expanded="false" />
+            <element signature="class#52471:52791" expanded="false" />
+            <element signature="method#handle#0;class#52471:52791" expanded="false" />
+            <element signature="class#59481:61627" expanded="false" />
+            <element signature="method#setCheckBox#0;class#Controller#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testing.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test2.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Translate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="349" column="17" selection-start-line="349" selection-start-column="17" selection-end-line="349" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/CPU.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="145" column="18" selection-start-line="145" selection-start-column="18" selection-end-line="145" selection-end-column="18" />
+          <folding>
+            <element signature="method#ldr#0;class#CPU#0" expanded="false" />
+            <element signature="method#str#0;class#CPU#0" expanded="false" />
+            <element signature="docComment;method#ldx#0;class#CPU#0" expanded="false" />
+            <element signature="method#ldx#0;class#CPU#0" expanded="false" />
+            <element signature="docComment;method#stx#0;class#CPU#0" expanded="false" />
+            <element signature="method#stx#0;class#CPU#0" expanded="false" />
+            <element signature="method#amr#0;class#CPU#0" expanded="false" />
+            <element signature="method#smr#0;class#CPU#0" expanded="false" />
+            <element signature="method#air#0;class#CPU#0" expanded="false" />
+            <element signature="method#sir#0;class#CPU#0" expanded="false" />
+            <element signature="method#jne#0;class#CPU#0" expanded="false" />
+            <element signature="method#jma#0;class#CPU#0" expanded="false" />
+            <element signature="method#jsr#0;class#CPU#0" expanded="false" />
+            <element signature="method#rfs#0;class#CPU#0" expanded="false" />
+            <element signature="method#sob#0;class#CPU#0" expanded="false" />
+            <element signature="method#jge#0;class#CPU#0" expanded="false" />
+            <element signature="e#9399#9449#0" expanded="false" />
+            <element signature="method#rrc#0;class#CPU#0" expanded="false" />
+            <element signature="docComment;method#getIRValue#0;class#CPU#0" expanded="false" />
+            <element signature="docComment;method#setIRValue#0;class#CPU#0" expanded="false" />
+            <element signature="docComment;method#getISRValue#0;class#CPU#0" expanded="false" />
+            <element signature="docComment;method#setISRValue#0;class#CPU#0" expanded="false" />
+            <element signature="method#test_jne#0;class#CPU#0" expanded="false" />
+            <element signature="method#test_jcc#0;class#CPU#0" expanded="false" />
+            <element signature="method#test_jma#0;class#CPU#0" expanded="false" />
+            <element signature="method#test_jsr#0;class#CPU#0" expanded="false" />
+            <element signature="method#test_rfs#0;class#CPU#0" expanded="false" />
+            <element signature="method#test_sob#0;class#CPU#0" expanded="false" />
+            <element signature="method#test_jge#0;class#CPU#0" expanded="false" />
+            <element signature="method#test_mlt#0;class#CPU#0" expanded="false" />
+            <element signature="e#17143#17193#0" expanded="false" />
+            <element signature="method#test_dvd#0;class#CPU#0" expanded="false" />
+            <element signature="e#17625#17675#0" expanded="false" />
+            <element signature="method#test_trr#0;class#CPU#0" expanded="false" />
+            <element signature="method#test_and#0;class#CPU#0" expanded="false" />
+            <element signature="method#test_or#0;class#CPU#0" expanded="false" />
+            <element signature="method#test_not#0;class#CPU#0" expanded="false" />
+            <element signature="method#test_src#0;class#CPU#0" expanded="false" />
+            <element signature="method#test_rrc#0;class#CPU#0" expanded="false" />
+            <element signature="method#test_in#0;class#CPU#0" expanded="false" />
+            <element signature="method#test_out#0;class#CPU#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/sample.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
           <caret line="69" column="29" selection-start-line="69" selection-start-column="29" selection-end-line="69" selection-end-column="29" />
           <folding />
         </state>
@@ -883,17 +1037,37 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="122" column="70" selection-start-line="122" selection-start-column="61" selection-end-line="122" selection-end-column="70" />
           <folding>
-            <element signature="method#handle#0;class#7680:15291" expanded="false" />
-            <element signature="e#8183#8200#0" expanded="false" />
-            <element signature="class#15339:22874" expanded="false" />
-            <element signature="method#handle#0;class#15339:22874" expanded="false" />
-            <element signature="class#22922:30397" expanded="false" />
-            <element signature="method#handle#0;class#22922:30397" expanded="false" />
-            <element signature="class#30445:37920" expanded="false" />
-            <element signature="method#handle#0;class#30445:37920" expanded="false" />
-            <element signature="class#37971:47990" expanded="false" />
-            <element signature="method#handle#0;class#37971:47990" expanded="false" />
-            <element signature="method#handle#0;class#48040:48495" expanded="false" />
+            <element signature="class#3164:3297" expanded="false" />
+            <element signature="class#3347:10958" expanded="false" />
+            <element signature="method#handle#0;class#3347:10958" expanded="false" />
+            <element signature="e#3850#3867#0" expanded="false" />
+            <element signature="class#11006:18541" expanded="false" />
+            <element signature="method#handle#0;class#11006:18541" expanded="false" />
+            <element signature="class#18589:26064" expanded="false" />
+            <element signature="method#handle#0;class#18589:26064" expanded="false" />
+            <element signature="class#26112:33587" expanded="false" />
+            <element signature="method#handle#0;class#26112:33587" expanded="false" />
+            <element signature="class#33637:43656" expanded="false" />
+            <element signature="method#handle#0;class#33637:43656" expanded="false" />
+            <element signature="class#43704:44124" expanded="false" />
+            <element signature="method#handle#0;class#43704:44124" expanded="false" />
+            <element signature="class#44172:44527" expanded="false" />
+            <element signature="method#handle#0;class#44172:44527" expanded="false" />
+            <element signature="class#44575:44930" expanded="false" />
+            <element signature="method#handle#0;class#44575:44930" expanded="false" />
+            <element signature="class#44975:45383" expanded="false" />
+            <element signature="method#handle#0;class#44975:45383" expanded="false" />
+            <element signature="class#45432:45887" expanded="false" />
+            <element signature="method#handle#0;class#45432:45887" expanded="false" />
+            <element signature="class#51337:51657" expanded="false" />
+            <element signature="method#handle#0;class#51337:51657" expanded="false" />
+            <element signature="class#51715:52035" expanded="false" />
+            <element signature="class#52093:52413" expanded="false" />
+            <element signature="method#handle#0;class#52093:52413" expanded="false" />
+            <element signature="class#52471:52791" expanded="false" />
+            <element signature="method#handle#0;class#52471:52791" expanded="false" />
+            <element signature="class#59481:61627" expanded="false" />
+            <element signature="method#setCheckBox#0;class#Controller#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -988,17 +1162,37 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="122" column="70" selection-start-line="122" selection-start-column="61" selection-end-line="122" selection-end-column="70" />
           <folding>
-            <element signature="method#handle#0;class#7680:15291" expanded="false" />
-            <element signature="e#8183#8200#0" expanded="false" />
-            <element signature="class#15339:22874" expanded="false" />
-            <element signature="method#handle#0;class#15339:22874" expanded="false" />
-            <element signature="class#22922:30397" expanded="false" />
-            <element signature="method#handle#0;class#22922:30397" expanded="false" />
-            <element signature="class#30445:37920" expanded="false" />
-            <element signature="method#handle#0;class#30445:37920" expanded="false" />
-            <element signature="class#37971:47990" expanded="false" />
-            <element signature="method#handle#0;class#37971:47990" expanded="false" />
-            <element signature="method#handle#0;class#48040:48495" expanded="false" />
+            <element signature="class#3164:3297" expanded="false" />
+            <element signature="class#3347:10958" expanded="false" />
+            <element signature="method#handle#0;class#3347:10958" expanded="false" />
+            <element signature="e#3850#3867#0" expanded="false" />
+            <element signature="class#11006:18541" expanded="false" />
+            <element signature="method#handle#0;class#11006:18541" expanded="false" />
+            <element signature="class#18589:26064" expanded="false" />
+            <element signature="method#handle#0;class#18589:26064" expanded="false" />
+            <element signature="class#26112:33587" expanded="false" />
+            <element signature="method#handle#0;class#26112:33587" expanded="false" />
+            <element signature="class#33637:43656" expanded="false" />
+            <element signature="method#handle#0;class#33637:43656" expanded="false" />
+            <element signature="class#43704:44124" expanded="false" />
+            <element signature="method#handle#0;class#43704:44124" expanded="false" />
+            <element signature="class#44172:44527" expanded="false" />
+            <element signature="method#handle#0;class#44172:44527" expanded="false" />
+            <element signature="class#44575:44930" expanded="false" />
+            <element signature="method#handle#0;class#44575:44930" expanded="false" />
+            <element signature="class#44975:45383" expanded="false" />
+            <element signature="method#handle#0;class#44975:45383" expanded="false" />
+            <element signature="class#45432:45887" expanded="false" />
+            <element signature="method#handle#0;class#45432:45887" expanded="false" />
+            <element signature="class#51337:51657" expanded="false" />
+            <element signature="method#handle#0;class#51337:51657" expanded="false" />
+            <element signature="class#51715:52035" expanded="false" />
+            <element signature="class#52093:52413" expanded="false" />
+            <element signature="method#handle#0;class#52093:52413" expanded="false" />
+            <element signature="class#52471:52791" expanded="false" />
+            <element signature="method#handle#0;class#52471:52791" expanded="false" />
+            <element signature="class#59481:61627" expanded="false" />
+            <element signature="method#setCheckBox#0;class#Controller#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1093,17 +1287,37 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="method#handle#0;class#7680:15291" expanded="false" />
-            <element signature="e#8183#8200#0" expanded="false" />
-            <element signature="class#15339:22874" expanded="false" />
-            <element signature="method#handle#0;class#15339:22874" expanded="false" />
-            <element signature="class#22922:30397" expanded="false" />
-            <element signature="method#handle#0;class#22922:30397" expanded="false" />
-            <element signature="class#30445:37920" expanded="false" />
-            <element signature="method#handle#0;class#30445:37920" expanded="false" />
-            <element signature="class#37971:47990" expanded="false" />
-            <element signature="method#handle#0;class#37971:47990" expanded="false" />
-            <element signature="method#handle#0;class#48040:48495" expanded="false" />
+            <element signature="class#3164:3297" expanded="false" />
+            <element signature="class#3347:10958" expanded="false" />
+            <element signature="method#handle#0;class#3347:10958" expanded="false" />
+            <element signature="e#3850#3867#0" expanded="false" />
+            <element signature="class#11006:18541" expanded="false" />
+            <element signature="method#handle#0;class#11006:18541" expanded="false" />
+            <element signature="class#18589:26064" expanded="false" />
+            <element signature="method#handle#0;class#18589:26064" expanded="false" />
+            <element signature="class#26112:33587" expanded="false" />
+            <element signature="method#handle#0;class#26112:33587" expanded="false" />
+            <element signature="class#33637:43656" expanded="false" />
+            <element signature="method#handle#0;class#33637:43656" expanded="false" />
+            <element signature="class#43704:44124" expanded="false" />
+            <element signature="method#handle#0;class#43704:44124" expanded="false" />
+            <element signature="class#44172:44527" expanded="false" />
+            <element signature="method#handle#0;class#44172:44527" expanded="false" />
+            <element signature="class#44575:44930" expanded="false" />
+            <element signature="method#handle#0;class#44575:44930" expanded="false" />
+            <element signature="class#44975:45383" expanded="false" />
+            <element signature="method#handle#0;class#44975:45383" expanded="false" />
+            <element signature="class#45432:45887" expanded="false" />
+            <element signature="method#handle#0;class#45432:45887" expanded="false" />
+            <element signature="class#51337:51657" expanded="false" />
+            <element signature="method#handle#0;class#51337:51657" expanded="false" />
+            <element signature="class#51715:52035" expanded="false" />
+            <element signature="class#52093:52413" expanded="false" />
+            <element signature="method#handle#0;class#52093:52413" expanded="false" />
+            <element signature="class#52471:52791" expanded="false" />
+            <element signature="method#handle#0;class#52471:52791" expanded="false" />
+            <element signature="class#59481:61627" expanded="false" />
+            <element signature="method#setCheckBox#0;class#Controller#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1190,17 +1404,37 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="method#handle#0;class#7680:15291" expanded="false" />
-            <element signature="e#8183#8200#0" expanded="false" />
-            <element signature="class#15339:22874" expanded="false" />
-            <element signature="method#handle#0;class#15339:22874" expanded="false" />
-            <element signature="class#22922:30397" expanded="false" />
-            <element signature="method#handle#0;class#22922:30397" expanded="false" />
-            <element signature="class#30445:37920" expanded="false" />
-            <element signature="method#handle#0;class#30445:37920" expanded="false" />
-            <element signature="class#37971:47990" expanded="false" />
-            <element signature="method#handle#0;class#37971:47990" expanded="false" />
-            <element signature="method#handle#0;class#48040:48495" expanded="false" />
+            <element signature="class#3164:3297" expanded="false" />
+            <element signature="class#3347:10958" expanded="false" />
+            <element signature="method#handle#0;class#3347:10958" expanded="false" />
+            <element signature="e#3850#3867#0" expanded="false" />
+            <element signature="class#11006:18541" expanded="false" />
+            <element signature="method#handle#0;class#11006:18541" expanded="false" />
+            <element signature="class#18589:26064" expanded="false" />
+            <element signature="method#handle#0;class#18589:26064" expanded="false" />
+            <element signature="class#26112:33587" expanded="false" />
+            <element signature="method#handle#0;class#26112:33587" expanded="false" />
+            <element signature="class#33637:43656" expanded="false" />
+            <element signature="method#handle#0;class#33637:43656" expanded="false" />
+            <element signature="class#43704:44124" expanded="false" />
+            <element signature="method#handle#0;class#43704:44124" expanded="false" />
+            <element signature="class#44172:44527" expanded="false" />
+            <element signature="method#handle#0;class#44172:44527" expanded="false" />
+            <element signature="class#44575:44930" expanded="false" />
+            <element signature="method#handle#0;class#44575:44930" expanded="false" />
+            <element signature="class#44975:45383" expanded="false" />
+            <element signature="method#handle#0;class#44975:45383" expanded="false" />
+            <element signature="class#45432:45887" expanded="false" />
+            <element signature="method#handle#0;class#45432:45887" expanded="false" />
+            <element signature="class#51337:51657" expanded="false" />
+            <element signature="method#handle#0;class#51337:51657" expanded="false" />
+            <element signature="class#51715:52035" expanded="false" />
+            <element signature="class#52093:52413" expanded="false" />
+            <element signature="method#handle#0;class#52093:52413" expanded="false" />
+            <element signature="class#52471:52791" expanded="false" />
+            <element signature="method#handle#0;class#52471:52791" expanded="false" />
+            <element signature="class#59481:61627" expanded="false" />
+            <element signature="method#setCheckBox#0;class#Controller#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1297,17 +1531,37 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="method#handle#0;class#7680:15291" expanded="false" />
-            <element signature="e#8183#8200#0" expanded="false" />
-            <element signature="class#15339:22874" expanded="false" />
-            <element signature="method#handle#0;class#15339:22874" expanded="false" />
-            <element signature="class#22922:30397" expanded="false" />
-            <element signature="method#handle#0;class#22922:30397" expanded="false" />
-            <element signature="class#30445:37920" expanded="false" />
-            <element signature="method#handle#0;class#30445:37920" expanded="false" />
-            <element signature="class#37971:47990" expanded="false" />
-            <element signature="method#handle#0;class#37971:47990" expanded="false" />
-            <element signature="method#handle#0;class#48040:48495" expanded="false" />
+            <element signature="class#3164:3297" expanded="false" />
+            <element signature="class#3347:10958" expanded="false" />
+            <element signature="method#handle#0;class#3347:10958" expanded="false" />
+            <element signature="e#3850#3867#0" expanded="false" />
+            <element signature="class#11006:18541" expanded="false" />
+            <element signature="method#handle#0;class#11006:18541" expanded="false" />
+            <element signature="class#18589:26064" expanded="false" />
+            <element signature="method#handle#0;class#18589:26064" expanded="false" />
+            <element signature="class#26112:33587" expanded="false" />
+            <element signature="method#handle#0;class#26112:33587" expanded="false" />
+            <element signature="class#33637:43656" expanded="false" />
+            <element signature="method#handle#0;class#33637:43656" expanded="false" />
+            <element signature="class#43704:44124" expanded="false" />
+            <element signature="method#handle#0;class#43704:44124" expanded="false" />
+            <element signature="class#44172:44527" expanded="false" />
+            <element signature="method#handle#0;class#44172:44527" expanded="false" />
+            <element signature="class#44575:44930" expanded="false" />
+            <element signature="method#handle#0;class#44575:44930" expanded="false" />
+            <element signature="class#44975:45383" expanded="false" />
+            <element signature="method#handle#0;class#44975:45383" expanded="false" />
+            <element signature="class#45432:45887" expanded="false" />
+            <element signature="method#handle#0;class#45432:45887" expanded="false" />
+            <element signature="class#51337:51657" expanded="false" />
+            <element signature="method#handle#0;class#51337:51657" expanded="false" />
+            <element signature="class#51715:52035" expanded="false" />
+            <element signature="class#52093:52413" expanded="false" />
+            <element signature="method#handle#0;class#52093:52413" expanded="false" />
+            <element signature="class#52471:52791" expanded="false" />
+            <element signature="method#handle#0;class#52471:52791" expanded="false" />
+            <element signature="class#59481:61627" expanded="false" />
+            <element signature="method#setCheckBox#0;class#Controller#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1412,7 +1666,7 @@
       </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="69" column="29" selection-start-line="69" selection-start-column="29" selection-end-line="69" selection-end-column="29" />
+          <caret line="87" column="24" selection-start-line="87" selection-start-column="24" selection-end-line="87" selection-end-column="24" />
           <folding />
         </state>
       </provider>
@@ -1475,31 +1729,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
+    <entry file="file://$PROJECT_DIR$/testing.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="983" column="71" selection-start-line="983" selection-start-column="71" selection-end-line="983" selection-end-column="71" />
-          <folding>
-            <element signature="method#handle#0;class#7680:15291" expanded="false" />
-            <element signature="e#8183#8200#0" expanded="false" />
-            <element signature="class#15339:22874" expanded="false" />
-            <element signature="method#handle#0;class#15339:22874" expanded="false" />
-            <element signature="class#22922:30397" expanded="false" />
-            <element signature="method#handle#0;class#22922:30397" expanded="false" />
-            <element signature="class#30445:37920" expanded="false" />
-            <element signature="method#handle#0;class#30445:37920" expanded="false" />
-            <element signature="class#37971:47990" expanded="false" />
-            <element signature="method#handle#0;class#37971:47990" expanded="false" />
-            <element signature="method#handle#0;class#48040:48495" expanded="false" />
-          </folding>
+          <caret line="32" column="10" selection-start-line="32" selection-start-column="10" selection-end-line="32" selection-end-column="10" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/testing.txt">
+    <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36120403">
-          <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
-          <folding />
+        <state vertical-scroll-proportion="0.25611746">
+          <caret line="1032" column="8" selection-start-line="1032" selection-start-column="8" selection-end-line="1032" selection-end-column="8" />
+          <folding>
+            <element signature="class#3164:3297" expanded="false" />
+            <element signature="class#3347:10958" expanded="false" />
+            <element signature="method#handle#0;class#3347:10958" expanded="false" />
+            <element signature="e#3850#3867#0" expanded="false" />
+            <element signature="class#11006:18541" expanded="false" />
+            <element signature="method#handle#0;class#11006:18541" expanded="false" />
+            <element signature="class#18589:26064" expanded="false" />
+            <element signature="method#handle#0;class#18589:26064" expanded="false" />
+            <element signature="class#26112:33587" expanded="false" />
+            <element signature="method#handle#0;class#26112:33587" expanded="false" />
+            <element signature="class#33637:43656" expanded="false" />
+            <element signature="method#handle#0;class#33637:43656" expanded="false" />
+            <element signature="class#43704:44124" expanded="false" />
+            <element signature="method#handle#0;class#43704:44124" expanded="false" />
+            <element signature="class#44172:44527" expanded="false" />
+            <element signature="method#handle#0;class#44172:44527" expanded="false" />
+            <element signature="class#44575:44930" expanded="false" />
+            <element signature="method#handle#0;class#44575:44930" expanded="false" />
+            <element signature="class#44975:45383" expanded="false" />
+            <element signature="method#handle#0;class#44975:45383" expanded="false" />
+            <element signature="class#45432:45887" expanded="false" />
+            <element signature="method#handle#0;class#45432:45887" expanded="false" />
+            <element signature="class#51337:51657" expanded="false" />
+            <element signature="method#handle#0;class#51337:51657" expanded="false" />
+            <element signature="class#51715:52035" expanded="false" />
+            <element signature="class#52093:52413" expanded="false" />
+            <element signature="method#handle#0;class#52093:52413" expanded="false" />
+            <element signature="class#52471:52791" expanded="false" />
+            <element signature="method#handle#0;class#52471:52791" expanded="false" />
+            <element signature="class#59481:61627" expanded="false" />
+            <element signature="method#setCheckBox#0;class#Controller#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -35,14 +35,10 @@ public class Controller implements Initializable {
     CheckBox R3_B1, R3_B2, R3_B4, R3_B8, R3_B16, R3_B32, R3_B64, R3_B128, R3_B256, R3_B512, R3_B1024, R3_B2048, R3_B4096, R3_B8192, R3_B16384, R3_B32768;
     @FXML
     CheckBox Inst_B1, Inst_B2, Inst_B4, Inst_B8, Inst_B16, Inst_B32, Inst_B64, Inst_B128, Inst_B256, Inst_B512, Inst_B1024, Inst_B2048, Inst_B4096, Inst_B8192, Inst_B16384, Inst_B32768;
-    /*@FXML
-    CheckBox PC_B1, PC_B2, PC_B4, PC_B8, PC_B16, PC_B32, PC_B64, PC_B128, PC_B256, PC_B512, PC_B1024, PC_B2048;*/
-
     @FXML
-    Button setR0Btn, setR1Btn, setR2Btn, setR3Btn, setBtnInst, btnDisplay, setPCBtn, btnSSS, setI1btn, setI2btn, setI3btn, setCCbtn;
-
+    Button setR0Btn, setR1Btn, setR2Btn, setR3Btn, setBtnInst, btnDisplay, setPCBtn, btnSSS, setI1btn, setI2btn, setI3btn;
     @FXML
-    Button setCC0btn, setCC1btn, setCC2btn, setCC3btn;
+    Button setCC0btn, setCC1btn, setCC2btn, setCC3btn, btnRUN, btnLoad, btnSIT;
 
     @FXML
     TextField TxtValInst, TxtAddress, txtI1Val, txtI2Val, txtI3Val, LabelValR0, LabelValR1, LabelValR2, LabelValR3, terminalTF;
@@ -59,9 +55,7 @@ public class Controller implements Initializable {
     private short instNumber;
     private short result;
     static int resultIN = 0;
-    private boolean isIN = false;
     private int counter = 0;
-    // KeyCode kc;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -69,87 +63,14 @@ public class Controller implements Initializable {
         CheckBox R1ObjArray[] = {R1_B1, R1_B2, R1_B4, R1_B8, R1_B16, R1_B32, R1_B64, R1_B128, R1_B256, R1_B512, R1_B1024, R1_B2048, R1_B4096, R1_B8192, R1_B16384, R1_B32768};
         CheckBox R2ObjArray[] = {R2_B1, R2_B2, R2_B4, R2_B8, R2_B16, R2_B32, R2_B64, R2_B128, R2_B256, R2_B512, R2_B1024, R2_B2048, R2_B4096, R2_B8192, R2_B16384, R2_B32768};
         CheckBox R3ObjArray[] = {R3_B1, R3_B2, R3_B4, R3_B8, R3_B16, R3_B32, R3_B64, R3_B128, R3_B256, R3_B512, R3_B1024, R3_B2048, R3_B4096, R3_B8192, R3_B16384, R3_B32768};
-        //theTestFunction(Button btn, CheckBox);
-//        btnDisplay.setDisable(true);
-        //btnSSS.setDisable(true);
-        /*R0HBox.setOnMouseClicked(new EventHandler<MouseEvent>() {
-            @Override
-            public void handle(MouseEvent event) {
-                System.out.println(event.getSource());
-            }
-        });*/
-        //R1HBox.setOnDragOver();
+
         Platform.runLater(new Runnable() {
             @Override
             public void run() {
                 terminalTF.requestFocus();
             }
         });
-        terminalTF.setOnKeyPressed(new EventHandler<KeyEvent>() {
 
-            public int i = 504;
-
-            @Override
-            public void handle(KeyEvent event) {
-                List<String> input = new ArrayList<String>();
-                List<String> ISAList = new ArrayList<String>();
-                if (event.getCode().equals(KeyCode.ENTER)) {
-                    Translate translate;
-//                    input.add([0]);
-                    if (terminalTF.getText().trim().split(" ")[0].equals("run")) {
-                        try (BufferedReader br = new BufferedReader(new FileReader(new File("" + System.getProperty("user.dir").trim()
-                                + "//" + terminalTF.getText().trim().split(" ")[1])))) {
-                            String currLine = "";
-                            while ((currLine = br.readLine()) != null) {
-                                translate = new Translate(currLine);
-                                instNumber = translate.stringBuilder();
-                                Main.myCache.write(i, instNumber);
-                                counter++;
-                                i++;
-                            }
-                            Main.cpu.setPC(503);
-                            /*for (int i = 0; i < counter; i++) {
-                                if ((Main.myCache.read(Main.cpu.getPC()) >> 10 & 0x3F) == 61) {
-                                    terminalTF.setText("");
-                                    terminalTF.setOnAction(new EventHandler<ActionEvent>() {
-                                        @Override
-                                        public void handle(ActionEvent event) {
-                                            terminalTF.setOnKeyPressed(new EventHandler<KeyEvent>() {
-                                                @Override
-                                                public void handle(KeyEvent event) {
-                                                    if(event.getCode().equals(KeyCode.SPACE)){
-                                                        resultIN = Integer.parseInt(terminalTF.getText());
-                                                        Main.cpu.process_instruction(Main.cpu.getPC(), Main.myCache);
-                                                        Main.cpu.setPC(Main.cpu.getPC() + 1);
-                                                        System.out.println("RESULT: " + result);
-                                                    }
-                                                }
-                                            });
-                                        }
-                                    });
-                                } else {
-                                    System.out.println("Else!!!");
-                                    Main.cpu.process_instruction(Main.cpu.getPC(), Main.myCache);
-                                    Main.cpu.setPC(Main.cpu.getPC() + 1);
-                                }
-                            }*/
-                        } catch (FileNotFoundException e) {
-                            e.printStackTrace();
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                        }
-                    } else {
-                        translate = new Translate(terminalTF.getText().trim());
-                        instNumber = translate.stringBuilder();
-                        Main.cpu.setPC(1);
-                        Main.myCache.write(1, instNumber);
-                        LabelValPC.setText(String.valueOf(Main.cpu.getPC()));
-                    }
-//                    for (int i =0; i < input.size(); i++)
-//                        terminalTF.setText(input.get(0));
-                }
-            }
-        });
         EventHandler eventHandlerR0Line = new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
@@ -746,7 +667,6 @@ public class Controller implements Initializable {
                 }
             }
         };
-
         EventHandler eventHandlerInstLine = new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
@@ -924,7 +844,45 @@ public class Controller implements Initializable {
                 }
             }
         };
+        EventHandler eventHandlerI1Line = new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                if (event.getSource().toString().equals(setI1btn.toString())) {
+                    short value = Short.parseShort(txtI1Val.getText().trim());
+//                    System.out.println("IR1 Value: " + value);
+                    Main.cpu.setIRValue(1, value);
+                }
+            }
+        };
+        EventHandler eventHandlerI2Line = new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                if (event.getSource().toString().equals(setI2btn.toString())) {
+                    short value = Short.parseShort(txtI2Val.getText().trim());
+                    Main.cpu.setIRValue(2, value);
+                }
+            }
+        };
+        EventHandler eventHandlerI3Line = new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                if (event.getSource().toString().equals(setI3btn.toString())) {
+                    short value = Short.parseShort(txtI3Val.getText().trim());
+                    Main.cpu.setIRValue(3, value);
+                }
+            }
+        };
 
+        EventHandler eventHandlerPC = new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                if (event.getSource().toString().equals(setPCBtn.toString())) {
+//                    btnDisplay.setDisable(false);
+                    Main.cpu.setPC(Integer.parseInt(LabelValPC.getText().trim()));
+                    //btnSSS.setDisable(false);
+                }
+            }
+        };
         EventHandler eventHandlerDisplay = new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
@@ -939,17 +897,12 @@ public class Controller implements Initializable {
             public void handle(ActionEvent event) {
                 if (event.getSource().toString().equals(btnSSS.toString())) {
 //                    Main.cpu.setIRValue(1, (short) 1);
-
-
                     if ((Main.myCache.read(Main.cpu.getPC()) >> 10 & 0x3F) == 61) {
                         terminalTF.setText("");
-//                        terminalTF.setOnAction(new EventHandler<ActionEvent>() {
-//                            @Override
-//                            public void handle(ActionEvent event) {
                         terminalTF.setOnKeyPressed(new EventHandler<KeyEvent>() {
                             @Override
                             public void handle(KeyEvent event) {
-                                if (event.getCode().equals(KeyCode.SPACE)) {
+                                if (event.getCode().equals(KeyCode.ENTER)) {
                                     resultIN = Integer.parseInt(terminalTF.getText());
                                     Main.cpu.process_instruction(Main.cpu.getPC(), Main.myCache);
                                     Main.cpu.setPC(Main.cpu.getPC() + 1);
@@ -1015,49 +968,7 @@ public class Controller implements Initializable {
                         txtCC1Val.setText(String.valueOf(Main.cpu.getCCValue(1)));
                         txtCC2Val.setText(String.valueOf(Main.cpu.getCCValue(2)));
                         txtCC3Val.setText(String.valueOf(Main.cpu.getCCValue(3)));
-
-
                     }
-                }
-            }
-
-        };
-
-        EventHandler eventHandlerI1Line = new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                if (event.getSource().toString().equals(setI1btn.toString())) {
-                    short value = Short.parseShort(txtI1Val.getText().trim());
-//                    System.out.println("IR1 Value: " + value);
-                    Main.cpu.setIRValue(1, value);
-                }
-            }
-        };
-        EventHandler eventHandlerI2Line = new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                if (event.getSource().toString().equals(setI2btn.toString())) {
-                    short value = Short.parseShort(txtI2Val.getText().trim());
-                    Main.cpu.setIRValue(2, value);
-                }
-            }
-        };
-        EventHandler eventHandlerI3Line = new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                if (event.getSource().toString().equals(setI3btn.toString())) {
-                    short value = Short.parseShort(txtI3Val.getText().trim());
-                    Main.cpu.setIRValue(3, value);
-                }
-            }
-        };
-        EventHandler eventHandlerPC = new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                if (event.getSource().toString().equals(setPCBtn.toString())) {
-//                    btnDisplay.setDisable(false);
-                    Main.cpu.setPC(Integer.parseInt(LabelValPC.getText().trim()));
-                    //btnSSS.setDisable(false);
                 }
             }
         };
@@ -1094,6 +1005,180 @@ public class Controller implements Initializable {
                 }
             }
         };
+
+        btnLoad.setOnAction(new EventHandler<ActionEvent>() {
+            Translate translate;
+            public int firstInst = 504;
+
+            @Override
+            public void handle(ActionEvent event) {
+                try (BufferedReader br = new BufferedReader(new FileReader(new File("" + System.getProperty("user.dir").trim()
+                        + "//" + terminalTF.getText().trim())))) {
+                    String currLine = "";
+                    while ((currLine = br.readLine()) != null) {
+                        translate = new Translate(currLine);
+                        instNumber = translate.stringBuilder();
+                        Main.myCache.write(firstInst, instNumber);
+                        counter++;
+                        firstInst++;
+                    }
+                    Main.cpu.setPC(504);
+                } catch (FileNotFoundException e) {
+                    e.printStackTrace();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+        
+        btnRUN.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                for (int i = 0; i < 150; i++) {
+                    if ((Main.myCache.read(Main.cpu.getPC()) >> 10 & 0x3F) == 16 || (Main.myCache.read(Main.cpu.getPC()) >> 10 & 0x3F) == 17) {
+                        if ((Main.myCache.read(Main.cpu.getPC()) >> 10 & 0x3F) == 61) {
+                            terminalTF.setText("");
+                            terminalTF.setOnAction(new EventHandler<ActionEvent>() {
+                                @Override
+                                public void handle(ActionEvent event) {
+                                    terminalTF.setOnKeyPressed(new EventHandler<KeyEvent>() {
+                                        @Override
+                                        public void handle(KeyEvent event) {
+                                            if (event.getCode().equals(KeyCode.ENTER)) {
+                                                resultIN = Integer.parseInt(terminalTF.getText());
+                                                Main.cpu.process_instruction(Main.cpu.getPC(), Main.myCache);
+                                                System.out.println("RESULT NEW: " + result);
+                                            }
+                                        }
+                                    });
+                                }
+                            });
+                        } else if ((Main.myCache.read(Main.cpu.getPC()) >> 10 & 0x3F) == 62) {
+                            result = Main.cpu.process_instruction(Main.cpu.getPC(), Main.myCache);
+                            terminalTF.setText(String.valueOf(result));
+                        } else {
+                            result = Main.cpu.process_instruction(Main.cpu.getPC(), Main.myCache);
+                        }
+                    } else {
+                        if ((Main.myCache.read(Main.cpu.getPC()) >> 10 & 0x3F) == 61) {
+                            terminalTF.setText("");
+                            terminalTF.setOnAction(new EventHandler<ActionEvent>() {
+                                @Override
+                                public void handle(ActionEvent event) {
+                                    terminalTF.setOnKeyPressed(new EventHandler<KeyEvent>() {
+                                        @Override
+                                        public void handle(KeyEvent event) {
+                                            if (event.getCode().equals(KeyCode.ENTER)) {
+                                                resultIN = Integer.parseInt(terminalTF.getText());
+                                                Main.cpu.process_instruction(Main.cpu.getPC(), Main.myCache);
+                                                System.out.println("RESULT NEW: " + result);
+                                            }
+                                        }
+                                    });
+                                }
+                            });
+
+                        } else if ((Main.myCache.read(Main.cpu.getPC()) >> 10 & 0x3F) == 62) {
+                            result = Main.cpu.process_instruction(Main.cpu.getPC(), Main.myCache);
+                            terminalTF.setText(String.valueOf(result));
+                        } else {
+                            result = Main.cpu.process_instruction(Main.cpu.getPC(), Main.myCache);
+                        }
+                        Main.cpu.setPC(Main.cpu.getPC() + 1);
+                    }
+                }
+                System.out.println("Counter: " + counter);
+                LabelValR0.setText(String.valueOf(Main.cpu.getGPRValue(0)));
+                LabelValR1.setText(String.valueOf(Main.cpu.getGPRValue(1)));
+                LabelValR2.setText(String.valueOf(Main.cpu.getGPRValue(2)));
+                LabelValR3.setText(String.valueOf(Main.cpu.getGPRValue(3)));
+                setCheckBox(Main.cpu.getGPRValue(0), R0ObjArray);
+                setCheckBox(Main.cpu.getGPRValue(1), R1ObjArray);
+                setCheckBox(Main.cpu.getGPRValue(2), R2ObjArray);
+                setCheckBox(Main.cpu.getGPRValue(3), R3ObjArray);
+                totalSumR0 = Main.cpu.getGPRValue(0);
+                totalSumR1 = Main.cpu.getGPRValue(1);
+                totalSumR2 = Main.cpu.getGPRValue(2);
+                totalSumR3 = Main.cpu.getGPRValue(3);
+                txtI1Val.setText(String.valueOf(Main.cpu.getIRValue(1)));
+                txtI2Val.setText(String.valueOf(Main.cpu.getIRValue(2)));
+                txtI3Val.setText(String.valueOf(Main.cpu.getIRValue(3)));
+                LabelValPC.setText(String.valueOf(Main.cpu.getPC()));
+                txtCC0Val.setText(String.valueOf(Main.cpu.getCCValue(0)));
+                txtCC1Val.setText(String.valueOf(Main.cpu.getCCValue(1)));
+                txtCC2Val.setText(String.valueOf(Main.cpu.getCCValue(2)));
+                txtCC3Val.setText(String.valueOf(Main.cpu.getCCValue(3)));
+            }
+        });
+        btnSIT.setOnAction(new EventHandler<ActionEvent>() {
+            Translate translate;
+
+            @Override
+            public void handle(ActionEvent event) {
+                translate = new Translate(terminalTF.getText().trim());
+                instNumber = translate.stringBuilder();
+                Main.cpu.setPC(1);
+                Main.myCache.write(1, instNumber);
+                if ((Main.myCache.read(Main.cpu.getPC()) >> 10 & 0x3F) == 61) {
+                    terminalTF.setText("");
+                    terminalTF.setOnKeyPressed(new EventHandler<KeyEvent>() {
+                        @Override
+                        public void handle(KeyEvent event) {
+                            if (event.getCode().equals(KeyCode.ENTER)) {
+                                resultIN = Integer.parseInt(terminalTF.getText());
+                                Main.cpu.process_instruction(Main.cpu.getPC(), Main.myCache);
+                                System.out.println("RESULT NEW: " + result);
+                            }
+                            LabelValR0.setText(String.valueOf(Main.cpu.getGPRValue(0)));
+                            LabelValR1.setText(String.valueOf(Main.cpu.getGPRValue(1)));
+                            LabelValR2.setText(String.valueOf(Main.cpu.getGPRValue(2)));
+                            LabelValR3.setText(String.valueOf(Main.cpu.getGPRValue(3)));
+                            setCheckBox(Main.cpu.getGPRValue(0), R0ObjArray);
+                            setCheckBox(Main.cpu.getGPRValue(1), R1ObjArray);
+                            setCheckBox(Main.cpu.getGPRValue(2), R2ObjArray);
+                            setCheckBox(Main.cpu.getGPRValue(3), R3ObjArray);
+                            totalSumR0 = Main.cpu.getGPRValue(0);
+                            totalSumR1 = Main.cpu.getGPRValue(1);
+                            totalSumR2 = Main.cpu.getGPRValue(2);
+                            totalSumR3 = Main.cpu.getGPRValue(3);
+                            txtI1Val.setText(String.valueOf(Main.cpu.getIRValue(1)));
+                            txtI2Val.setText(String.valueOf(Main.cpu.getIRValue(2)));
+                            txtI3Val.setText(String.valueOf(Main.cpu.getIRValue(3)));
+                            LabelValPC.setText(String.valueOf(Main.cpu.getPC()));
+                            txtCC0Val.setText(String.valueOf(Main.cpu.getCCValue(0)));
+                            txtCC1Val.setText(String.valueOf(Main.cpu.getCCValue(1)));
+                            txtCC2Val.setText(String.valueOf(Main.cpu.getCCValue(2)));
+                            txtCC3Val.setText(String.valueOf(Main.cpu.getCCValue(3)));
+                        }
+                    });
+                } else if ((Main.myCache.read(Main.cpu.getPC()) >> 10 & 0x3F) == 62) {
+                    result = Main.cpu.process_instruction(Main.cpu.getPC(), Main.myCache);
+                    terminalTF.setText(String.valueOf(result));
+                } else {
+                    result = Main.cpu.process_instruction(Main.cpu.getPC(), Main.myCache);
+                }
+                LabelValR0.setText(String.valueOf(Main.cpu.getGPRValue(0)));
+                LabelValR1.setText(String.valueOf(Main.cpu.getGPRValue(1)));
+                LabelValR2.setText(String.valueOf(Main.cpu.getGPRValue(2)));
+                LabelValR3.setText(String.valueOf(Main.cpu.getGPRValue(3)));
+                setCheckBox(Main.cpu.getGPRValue(0), R0ObjArray);
+                setCheckBox(Main.cpu.getGPRValue(1), R1ObjArray);
+                setCheckBox(Main.cpu.getGPRValue(2), R2ObjArray);
+                setCheckBox(Main.cpu.getGPRValue(3), R3ObjArray);
+                totalSumR0 = Main.cpu.getGPRValue(0);
+                totalSumR1 = Main.cpu.getGPRValue(1);
+                totalSumR2 = Main.cpu.getGPRValue(2);
+                totalSumR3 = Main.cpu.getGPRValue(3);
+                txtI1Val.setText(String.valueOf(Main.cpu.getIRValue(1)));
+                txtI2Val.setText(String.valueOf(Main.cpu.getIRValue(2)));
+                txtI3Val.setText(String.valueOf(Main.cpu.getIRValue(3)));
+                LabelValPC.setText(String.valueOf(Main.cpu.getPC()));
+                txtCC0Val.setText(String.valueOf(Main.cpu.getCCValue(0)));
+                txtCC1Val.setText(String.valueOf(Main.cpu.getCCValue(1)));
+                txtCC2Val.setText(String.valueOf(Main.cpu.getCCValue(2)));
+                txtCC3Val.setText(String.valueOf(Main.cpu.getCCValue(3)));
+            }
+        });
         setCC0btn.setOnAction(eventHandlerCC0);
         setCC1btn.setOnAction(eventHandlerCC1);
         setCC2btn.setOnAction(eventHandlerCC2);
@@ -1206,10 +1291,5 @@ public class Controller implements Initializable {
                 checkBoxes[i].setSelected(true);
             }
         }
-    }
-
-
-    private void theTestFunction() {
-
     }
 }

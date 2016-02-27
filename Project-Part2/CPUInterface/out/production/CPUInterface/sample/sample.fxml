@@ -269,16 +269,34 @@
                   <Insets bottom="10.0" top="10.0" />
                </padding>
             </HBox>
-        <HBox alignment="BOTTOM_CENTER">
+        <HBox alignment="BOTTOM_CENTER" spacing="20.0">
           <children>
             <TextField fx:id="terminalTF" promptText="&gt;_" HBox.hgrow="ALWAYS">
               <HBox.margin>
-                <Insets fx:id="x2" />
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" fx:id="x2" />
               </HBox.margin>
                      <font>
                         <Font name="Consolas" size="24.0" />
                      </font>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
             </TextField>
+                  <Button fx:id="btnSIT" mnemonicParsing="false" text="S.I.T">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="btnRUN" mnemonicParsing="false" prefWidth="144.0" text="RUN">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="btnLoad" alignment="CENTER" mnemonicParsing="false" text="LOAD">
+                     <HBox.margin>
+                        <Insets bottom="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
           </children>
         </HBox>
       </children>
