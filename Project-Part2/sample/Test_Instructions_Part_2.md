@@ -255,8 +255,9 @@ SRC 3,3,1,1
 
 Shift register by 3.
 
-Set R[3] = 7.
-Look at R[3].
+1. Put the instruction in the console. Hit Enter.
+2. Set R[3] = 7.
+3. Look at R[3].
 
 ## RRC
 
@@ -266,8 +267,9 @@ RRC 3,3,1,1
 
 Rotate register by 3.
 
-Set R[3] = 5.
-Look at R[3].
+1. Put the instruction in the console. Hit Enter.
+2. Set R[3] = 5.
+3. Look at R[3].
 
 # IN
 
